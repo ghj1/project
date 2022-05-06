@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://oapi.saramin.co.kr/guide/job-search -->
+<html><!-- head --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        
+        <title>Saramin API</title>
+
+        <link href="https://oapi.saramin.co.kr/favicon/favicon.ico" rel="favicon">
+        <link href="https://oapi.saramin.co.kr/favicon/favicon.ico" rel="icon" type="image/x-icon">
+
+        <!-- 공통으로 쓰이는 css 파일을넣는다.-->
+        <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="./Saramin API_files/style.css">
+
+        <!-- 컨텐츠페이지의 CSS 영역이 들어감 -->
+        
+
+        <!-- 공통으로 쓰이는 script 파일을넣는다.-->
+        <script src="./Saramin API_files/jquery.min.js"></script>
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+        <!--<script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>-->
+        <script src="./Saramin API_files/ui.js"></script>
+        <script src="./Saramin API_files/prism.js"></script>
+
+        <!-- 컨텐츠페이지의 스크립트 영역이 들어감 -->
+        
+        <meta id="csrf" name="csrf" content="1dcf4328-ceef-4545-998d-0311552729db">
+        <meta id="csrf_header" name="csrf_header" content="X-CSRF-TOKEN">
+    
+    </head>
+    <!-- head end -->
+
+    <body class="api_body">
+        <!-- header -->
+        <header class="wrap_header">
+        <div class="header">
+            <div class="bi">
+                <a href="https://oapi.saramin.co.kr/">
+                    <img src="./Saramin API_files/ppdcmy_oyl8-2rxicy_logo.png" alt="saramin Developers">
+                </a>
+            </div>
+
+            <!-- [dev] 로그인, 가입 페이지 등에서는 GNB 미노출 -->
+            
+<nav>
+    <ul id="gnb" class="gnb">
+        <li>
+            <a href="https://oapi.saramin.co.kr/introduce">API 소개</a>
+        </li>
+        <li>
+            <a href="https://oapi.saramin.co.kr/guide/info">API 안내</a>
+            <div id="submenu_guide" class="submenu">
+                <div class="submenu_unit">
+                    <strong>API 안내</strong>
+                    <ul>
+                        <li><a href="https://oapi.saramin.co.kr/guide/info">API 안내</a></li>
+                        <li><a href="https://oapi.saramin.co.kr/guide/old-api-migration">API 마이그레이션</a></li>
+                    </ul>
+                </div>
+                <div class="submenu_unit">
+                    <strong>API 가이드</strong>
+                    <ul>
+                        <li><a href="https://oapi.saramin.co.kr/guide/1">access-key 발급받기</a></li>
+                        <li><a href="https://oapi.saramin.co.kr/guide/employment-url">채용 공고 API URL 생성</a></li>
+                        <li><a href="https://oapi.saramin.co.kr/guide/example">API 호출 예제</a></li>
+                    </ul>
+                </div>
+                <div class="submenu_unit">
+                    <strong>API 공지</strong>
+                    <ul>
+                        <li><a href="https://oapi.saramin.co.kr/guide/notice">API 변경사항</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="on">
+            <a href="https://oapi.saramin.co.kr/guide/job-search">API 명세</a>
+            <div id="submenu_guide2" class="submenu">
+                <div class="submenu_unit">
+                    <strong>API 명세</strong>
+                    <ul>
+                        <li><a href="https://oapi.saramin.co.kr/guide/job-search-id">공고 번호 검색 API</a></li>
+                        <li><a href="https://oapi.saramin.co.kr/guide/job-search">채용 공고 API</a></li>
+                    </ul>
+                </div>
+                <div class="submenu_unit">
+                    <strong>사람인 코드표</strong>
+                    <ul>
+                        <li><a href="https://oapi.saramin.co.kr/guide/code-table1">근무형태/학력/연봉 코드표</a></li>
+                        <li><a href="https://oapi.saramin.co.kr/guide/code-table2">근무지/지역 코드표</a></li>
+                        <li><a href="https://oapi.saramin.co.kr/guide/code-table3">산업/업종 코드표</a></li>
+                        <li><a href="https://oapi.saramin.co.kr/guide/code-table4">구 직종 코드표</a></li>
+                        <li><a href="https://oapi.saramin.co.kr/guide/code-table5">직무/직업 코드표</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+</nav>
+
+
+
+            <!-- 로그인 전 -->
+            <div class="login_info">
+                <a href="https://oapi.saramin.co.kr/join" class="btn_m">이용신청</a>
+                <a href="https://oapi.saramin.co.kr/login" class="btn_m type_primary">로그인</a>
+            </div>
+
+            <!-- 로그인 후 -->
+            
+
+            <!-- 모바일 용 버튼 -->
+            <button type="button" id="btn_drawer" class="btn_drawer"><span class="blind">전체메뉴</span></button>
+            <button type="button" id="btn_close_drawer" class="btn_close"><span class="blind">전체메뉴 닫기</span></button>
+        </div>
+        <script>
+            const btnLogout = document.querySelector("#btnLogout");
+            if(btnLogout){
+                btnLogout.onclick = () => {
+                    document.querySelector("#formLogout").submit();
+                }
+            }
+        </script>
+    </header>
+        <!-- header end -->
+
+        <!-- content -->
+        <div class="wrap_content">
+            
+    <div id="lnb" class="wrap_lnb">
+
+        <div class="lnb" id="lnb_div_introduce" style="display:none;">
+            <strong class="tit_menu">API 소개</strong>
+            <ul class="lnbmenu">
+                <li>
+                    <a href="https://oapi.saramin.co.kr/introduce">사람인 채용정보 API</a>
+                </li>
+                <li>
+                    <a href="https://oapi.saramin.co.kr/caution">서비스 이용자 주의사항 </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="lnb" id="lnb_div_guide" style="display:none;">
+            <strong class="tit_menu">API 안내</strong>
+            <ul class="lnbmenu">
+                <li class="top">API 안내
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/info">API 사용안내</a>
+                        </li>
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/old-api-migration">API 마이그레이션</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top">API 가이드
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/1">access-key 발급 받기</a>
+                        </li>
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/employment-url">채용 공고 API URL 생성</a>
+                        </li>
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/example">API 호출 예제</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top">API 공지
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/notice">API 변경사항</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="lnb" id="lnb_div_guide2" style="display:block;">
+            <strong class="tit_menu">API 명세</strong>
+            <ul class="lnbmenu">
+                <li class="top">API 명세
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/job-search-id">공고 번호 검색 API</a>
+                        </li>
+                        <li class="on">
+                            <a href="https://oapi.saramin.co.kr/guide/job-search">채용 공고 API</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top">사람인 코드표
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/code-table1">근무형태/학력/연봉 코드표</a>
+                        </li>
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/code-table2">근무지/지역 코드표</a>
+                        </li>
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/code-table3">산업/업종 코드표</a>
+                        </li>
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/code-table4">구 직종 코드표</a>
+                        </li>
+                        <li>
+                            <a href="https://oapi.saramin.co.kr/guide/code-table5">직무/직업 코드표</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="lnb" id="lnb_div_apps" style="display:none;">
+            <strong class="tit_menu"></strong>
+            <ul class="lnbmenu">
+                <li>
+                    <a href="https://oapi.saramin.co.kr/apps">앱 등록</a>
+                </li>
+                <li>
+                    <p>내 앱 리스트</p>
+                    <ul class="submenu" id="ul_app_list">
+                        
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="lnb" id="lnb_div_mypage" style="display:none;">
+            <strong class="tit_menu">내 정보</strong>
+            <ul class="lnbmenu">
+                <li>
+                    <a href="https://oapi.saramin.co.kr/mypage">내 정보 수정</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+            <div>
+    <div class="page_header">
+        <h1 class="tit_page" id="h_page_header">채용 공고 API 가이드</h1>
+    </div>
+    <main class="content">
+        <div class="apidoc">
+            <div>
+                <p>채용 공고 API(Job Search API)는 사람인에 등록된 채용정보를 검색할 수 있습니다.</p>
+                <table class="tbl tbl_form">
+                    <colgroup>
+                        <col style="width:140px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">메소드</th>
+                        <td>GET</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">요청 URI</th>
+                        <td>https://oapi.saramin.co.kr/job-search</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="tit_section">요청 헤더 (Request Header)</h2>
+                <div style="margin-bottom: 15px;">응답 방식을 선택하여 넣어주세요.</div>
+                <table class="tbl tbl_list">
+                    <colgroup>
+                        <col style="width:30%">
+                        <col style="width:70%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">Header name</th>
+                        <th scope="col">Header value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Accept</td>
+                        <td><ul>
+                            <li>XML로 응답 : application/xml</li>
+                            <li>JSON로 응답 : application/json</li>
+                        </ul></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="tit_section">요청 변수(Request Parameters)</h2>
+                <div style="margin-bottom: 15px;">
+                    <span class="badge">필수</span> : 필수 입력 값 <br>
+                    <span class="badge type_green">복수 검색</span> : 공백과 , 로 구분합니다. 예: <strong>PHP%20MySQL</strong>, <strong>PHP+MySQL</strong>, <strong>PHP,MySQL</strong>
+                </div>
+                <table class="tbl tbl_list">
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:17%">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th scope="col">변수명</th>
+                        <th scope="col">형식</th>
+                        <th scope="col">설명</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="badge">필수</span> access-key</td>
+                        <td>string</td>
+                        <td>앱 등록 후 발급받은 키</td>
+                    </tr>
+                    <tr>
+                        <td>keywords</td>
+                        <td>string</td>
+                        <td>기업명, 공고명, 업직종 키워드, 직무내용에서 검색하고자 하는 검색어</td>
+                    </tr>
+                    <tr>
+                        <td>bbs_gb</td>
+                        <td>integer</td>
+                        <td>공채구분
+                            <ul>
+                                <li>1 : 공채속보</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>stock</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 상장여부
+                            <ul>
+                                <li>kospi : 유가증권</li>
+                                <li>kosdaq : 코스닥</li>
+                                <li>konex : 코넥스</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sr</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 제외 설정
+                            <ul>
+                                <li>directhire : 헤드헌팅/파견업체 공고 제외</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>loc_cd</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 근무지/지역 조건 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table2">코드표</a></span> </td>
+                    </tr>
+                    <tr>
+                        <td>loc_mcd</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 1차 근무지/지역 조건 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table2">코드표</a></span> </td>
+                    </tr>
+                    <tr>
+                        <td>loc_bcd</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 2차 근무지/지역 조건 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table2">코드표</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>ind_cd</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 산업/업종 조건 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table3">코드표</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>job_category</td>
+                        <td>string</td>
+                        <td><span class="type_red"><h4>2021년 11월 30일 이후 제거 예정입니다. job_mid_cd, job_code로 변경하여 사용해주세요.</h4></span>
+                            <p>검색이 가능하지만, 직종이 직무로 변경됨에 따라 결과의 정확성이 떨어질 수 있습니다.</p>
+                            <span class="badge type_green">복수 검색</span>
+                              직업/직종 조건
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>job_mid_cd</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span>상위 직무 코드 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table5">코드표</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>job_cd</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 직무 코드 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table5">코드표</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>job_type</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 근무형태/고용형태 조건(1-15) <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table1">코드표</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>edu_lv</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 학력 조건(0-9) <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table1">코드표</a></span></td>
+                    </tr>
+                    <tr>
+                        <td>fields</td>
+                        <td>string</td>
+                        <td><span class="badge type_green">복수 검색</span> 필드 선택
+                            <ul>
+                                <li>posting-date : 날짜/시간 형식의 게시일시</li>
+                                <li>expiration-date : 날짜/시간 형식의 마감일시</li>
+                                <li>keyword-code : 업직종 키워드(상세분류) 코드</li>
+                                <li>count : 조회수/지원자수/댓글수</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>published</td>
+                        <td>date</td>
+                        <td>등록일 검색 <br>(ex. 2019-03-20)</td>
+                    </tr>
+                    <tr>
+                        <td>published_min</td>
+                        <td>datetime|timestamp</td>
+                        <td>등록일시 검색 최소값<br>(ex. 2019-03-20 19:55:00 | Unix timestamp)</td>
+                    </tr>
+                    <tr>
+                        <td>published_max</td>
+                        <td>datetime|timestamp</td>
+                        <td>등록일 검색 최대값</td>
+                    </tr>
+                    <tr>
+                        <td>updated</td>
+                        <td>date</td>
+                        <td>수정일 검색 <br>(ex. 2019-03-20)</td>
+                    </tr>
+                    <tr>
+                        <td>updated_min</td>
+                        <td>datetime|timestamp</td>
+                        <td>수정일시 검색 최소값</td>
+                    </tr>
+                    <tr>
+                        <td>updated_max</td>
+                        <td>datetime|timestamp</td>
+                        <td>수정일시 검색 최대값</td>
+                    </tr>
+                    <tr>
+                        <td>deadline</td>
+                        <td>string</td>
+                        <td>마감일
+                            <ul>
+                                <li>today : 오늘 마감 공고</li>
+                                <li>tomorrow : 내일 마감 공고</li>
+                                <li>- : 마감된 공고</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>deadline</td>
+                        <td>datetime|timestamp</td>
+                        <td>마감일시 검색 </td>
+                    </tr>
+                    <tr>
+                        <td>start</td>
+                        <td>integer</td>
+                        <td>검색 결과 페이지 번호, 제로(0) 기반의 서수 번호 입니다.
+                            <ul>
+                                <li>0 : 기본 값</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>count</td>
+                        <td>integer</td>
+                        <td>검색 결과 수
+                            <ul>
+                                <li>10 : 기본값</li>
+                                <li>110 : 최대값</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>sort</td>
+                        <td>string</td>
+                        <td>검색 결과의 정렬 순서
+                            <ul>
+                                <li>pd: 게시일 역순(기본값)</li>
+                                <li>pa: 게시일순</li>
+                                <li>ud: 최근수정순</li>
+                                <li>ua: 수정일 정순</li>
+                                <li>da: 마감일 정순</li>
+                                <li>dd: 마감일 역순</li>
+                                <li>rc: 조회수 역순</li>
+                                <li>ac: 지원자수 역순</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p>별도로 명시하지 않는 한:</p>
+                <ul>
+                    <li>변수명은 대소문자를 구분하며, 입력값은 대소문자를 구분하지 않습니다.</li>
+                    <li><span class="badge type_green">복수 검색</span> : 공백과 , 로 구분합니다. 주소표시줄에서는 URL이 인코드되어 <strong>%20</strong> 또는 <strong>+</strong>로 변경 됩니다 예: <strong>PHP%20MySQL</strong>, <strong>PHP+MySQL</strong>, <strong>PHP,MySQL</strong></li>
+                    <li>하나의 매개변수에서 공백으로 구분한 여러 값은 모두 포함하여 검색되며, 다른 매개변수는 모든 조건을 만족하는 결과만 출력 합니다.  </li>
+                    <li>와일드카드(*, ?)와 AND/OR 는 지원하지 않습니다.</li>
+                </ul>
+
+                <h3 class="subtit">SAMPLE URL</h3>
+                <table class="tbl tbl_form">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>https://oapi.saramin.co.kr/job-search?access-key={KEY}&amp;keywords=웹+퍼블리셔</li>
+                                <li>https://oapi.saramin.co.kr/job-search?access-key={KEY}&amp;bbs_gb=1</li>
+                                <li>https://oapi.saramin.co.kr/job-search?access-key={KEY}&amp;stock=kospi+kosdaq</li>
+                                <li>https://oapi.saramin.co.kr/job-search?access-key={KEY}&amp;ind_cd=40101+40102&amp;fields=keyword-code</li>
+                                <li>https://oapi.saramin.co.kr/job-search?access-key={KEY}&amp;published=2019-05-28&amp;start=2&amp;count=100</li>
+                                <li>https://oapi.saramin.co.kr/job-search?access-key={KEY}&amp;published=2019-05-08</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>매개 변수 제공과 관련하여 구체적인 내용은 <a href="https://oapi.saramin.co.kr/guide/employment-url">URL 작성 도구</a>를 이용하여 확인할 수 있습니다.</p>
+            </div>
+
+            <h2 class="tit_section"> 응답 형태(Response type)</h2>
+            <ul id="tab_code" class="wrap_tab">
+                <li class="on"><a href="https://oapi.saramin.co.kr/guide/job-search#jobSearch" class="tab">XML</a></li>
+                <li><a href="https://oapi.saramin.co.kr/guide/job-search#jobSearchJson" class="tab">JSON</a></li>
+            </ul>
+
+            <div id="jobSearch" class="tabpanel active">
+                <div>
+        <h2 class="tit_section">출력 결과(Response Elements)</h2>
+
+        <table class="tbl tbl_list">
+            <colgroup>
+                <col style="width:3%">
+                <col style="width:3%">
+                <col style="width:5%">
+                <col style="width:5%">
+                <col style="width:12%">
+                <col style="width:50%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">Element</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Definition</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="6">job-search</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="5">jobs</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">count</td>
+                <td>job 엘리먼트 개수</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">start</td>
+                <td>검색 결과의 페이지 번호</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">total</td>
+                <td>총 검색 결과 수</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">job</td>
+                <td>채용공고 엘리먼트</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">id</td>
+                <td>공고 번호</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">url</td>
+                <td>채용공고 표준 URL. 공채속보의 경우, 리디렉션이 있을 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">active</td>
+                <td>공고 진행 여부
+                    <ul>
+                        <li>1 : 진행중</li>
+                        <li>0 : 마감</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">posting-timestamp</td>
+                <td>게시일의 Unix timestamp</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3"><span class="badge type_purple">선택</span> posting-date</td>
+                <td>날짜/시간 형식의 게시일 (2019-07-07T17:17:17+0900)<br>fields=posting-date</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">modification-timestamp</td>
+                <td>수정일 Unix timestamp </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">opening-timestamp</td>
+                <td>접수 시작일의 Unix timestamp </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">expiration-timestamp</td>
+                <td>마감일의 Unix timestamp </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3"><span class="badge type_purple">선택</span> expiration-date</td>
+                <td>날짜/시간 형식의 마감일<br>fields=expiration-date</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">close-type</td>
+                <td>마감일 형식
+                    <ul>
+                        <li>1 : 접수 마감일</li>
+                        <li>2 : 채용시</li>
+                        <li>3 : 상시</li>
+                        <li>4 : 수시</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">company</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">name</td>
+                <td>기업명</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">name@href</td>
+                <td>기업정보 페이지 (공개되어 있는 경우)</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">position</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">title</td>
+                <td>공고 제목</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">location</td>
+                <td>지역 코드, 지역명 (@code: 지역코드)</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">job-type</td>
+                <td>근무형태 코드, 근무형태명 (@code: 근무형태코드) <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table1">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">industry</td>
+                <td>업종코드, 업종명 (@code: 업종코드) <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table3">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">job-category</td>
+                <td><span class="type_red"><h4>2021년 11월 30일 이후 제거 예정입니다. job_mid_cd, job_code로 변경하여 사용해주세요.</h4></span>
+                    직종코드, 직종명 (@code: 직종코드)</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">job-mid-code</td>
+                <td>상위 직무코드, 직무명 (@code: 상위 직무코드) <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table5">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">job-code</td>
+                <td>직무 코드, 직무명 (@code: 직무코드) <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table5">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2"><span class="badge type_purple">선택</span> industry-keyword-code</td>
+                <td>업종 코드 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table3">코드표</a></span><br>fields=keyword-code</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2"><span class="badge type_purple">선택</span> job-category-keyword-code</td>
+                <td><span class="type_red"><h4>2021년 11월 30일 이후 제거 예정입니다. job_mid_cd, job_code로 변경하여 사용해주세요.</h4></span>
+                    직종 코드<br>fields=keyword-code</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2"><span class="badge type_purple">선택</span> job-code-keyword-code</td>
+                <td>직무 키워드 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table5">코드표</a></span><br>fields=keyword-code</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">experience-level</td>
+                <td>경력 (@min: 최소경력, @max: 최대경력)</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">experience-level (@code: 경력코드)</td>
+                <td>경력코드
+                    <ul>
+                        <li>1 : 신입</li>
+                        <li>2 : 경력</li>
+                        <li>3 : 신입/경력</li>
+                        <li>0 : 경력무관</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">required-education-level</td>
+                <td>학력 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table1">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">keyword</td>
+                <td>키워드 (쉼표로 구분됨)</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3"><span class="badge type_purple">선택</span> read-cnt</td>
+                <td>조회수<br>fields=count</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3"><span class="badge type_purple">선택</span> apply-cnt</td>
+                <td>지원자수<br>fields=count</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">salary</td>
+                <td>연봉 (@code: 연봉 코드) <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table1">코드표</a></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+                <h2 class="tit_section">Sample Output XML</h2>
+                <pre class=" language-xml" tabindex="0">                    <code class=" language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-search</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jobs</span> <span class="token attr-name">count</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span> <span class="token attr-name">start</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">total</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>95870<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span>36314892<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">&gt;</span></span>
+            http://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=36314892&amp;utm_source=job-search-api&amp;utm_medium=api&amp;utm_campaign=saramin-job-search-api
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>active</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>active</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>posting-timestamp</span><span class="token punctuation">&gt;</span></span>1559182220<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>posting-timestamp</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>posting-date</span><span class="token punctuation">&gt;</span></span>2019-05-30T11:10:20+09:00<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>posting-date</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modification-timestamp</span><span class="token punctuation">&gt;</span></span>1559182220<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modification-timestamp</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>opening-timestamp</span><span class="token punctuation">&gt;</span></span>1559181600<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>opening-timestamp</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>expiration-timestamp</span><span class="token punctuation">&gt;</span></span>1988118000<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>expiration-timestamp</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>close-type</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>채용시<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>close-type</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>company</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.saramin.co.kr/zf_user/company-info/view?csn=123123123#utm_source=job-search-api&amp;utm_medium=api&amp;utm_campaign=saramin-job-search-api<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <span class="token cdata">&lt;![CDATA[ 한스컨설팅 ]]&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>company</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>position</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>
+              <span class="token cdata">&lt;![CDATA[ 판교 위치 온라인 MMORPG게임 인사팀 채용 과장급 ]]&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>location</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>102190<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+              <span class="token cdata">&lt;![CDATA[ 경기 &gt; 성남시 분당구 ]]&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>location</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-type</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>정규직<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-type</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>industry</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>314<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>게임<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>industry</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-mid-code</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>22<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>IT개발·데이터<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-mid-code</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>job-code</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2072,2093,2106,2107<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>게임개발,기술지원,네트워크<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-code</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>experience-level</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>6<span class="token punctuation">"</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>경력 6~10년<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>experience-level</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>required-education-level</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>대학교졸업(4년)이상<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>required-education-level</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>position</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>keyword</span><span class="token punctuation">&gt;</span></span>
+            3D온라인게임,RPG,게임,게임개발,게임기획·마케팅,HRD·HRM,온라인게임,인사,인사기획,인사평가,채용·면접
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>keyword</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>salary</span> <span class="token attr-name">code</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>18<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>5,000~6,000만원<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>salary</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job</span><span class="token punctuation">&gt;</span></span>
+        ...
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jobs</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>job-search</span><span class="token punctuation">&gt;</span></span></code>
+                </pre>
+                <div>
+        <h2 class="tit_section">에러 출력 결과(Error Response Elements)</h2>
+
+        <table class="tbl tbl_list">
+            <colgroup>
+                <col style="width:5%">
+                <col style="width:5%">
+                <col style="width:50%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">Element</th>
+                <th scope="col"></th>
+                <th scope="col">Definition</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="3">result</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>code</td>
+                <td>
+                    <ul>
+                        <li>1 : access-key 미입력</li>
+                        <li>2 : 유효하지 않은 access-key</li>
+                        <li>3 : 유효하지 않은 request param</li>
+                        <li>99 : 오류 발생</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>message</td>
+                <td>오류 메시지</td>
+            </tr>
+            </tbody>
+        </table>
+        <h2 class="tit_section">Sample Output XML</h2>
+        <pre class=" language-xml" tabindex="0">            <code class=" language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>result</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>message</span><span class="token punctuation">&gt;</span></span>사용 불가능한 access-key 입니다. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>message</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>result</span><span class="token punctuation">&gt;</span></span></code></pre>
+    </div>
+            </div>
+
+            <div id="jobSearchJson" class="tabpanel">
+                <div>
+        <h2 class="tit_section">출력 결과(Response Elements)</h2>
+
+        <table class="tbl tbl_list">
+            <colgroup>
+                <col style="width:1%">
+                <col style="width:3%">
+                <col style="width:5%">
+                <col style="width:4%">
+                <col style="width:12%">
+                <col style="width:50%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">Element</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">Definition</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="6">jobs</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">count</td>
+                <td>job 엘리먼트 개수</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">start</td>
+                <td>검색 결과의 페이지 번호</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">total</td>
+                <td>총 검색 결과 수</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="4">job</td>
+                <td>채용공고 엘리먼트</td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">url</td>
+                <td>채용공고 표준 URL. 공채속보의 경우, 리디렉션이 있을 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">active</td>
+                <td>공고 진행 여부
+                    <ul>
+                        <li>1 : 진행중</li>
+                        <li>0 : 마감</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">company</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">detail</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>href</td>
+                <td>기업정보 페이지 (공개되어 있는 경우)</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>기업명</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">position</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">title</td>
+                <td>공고 제목</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">industry</td>
+                <td>업종 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table3">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>code</td>
+                <td>업종 코드</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>업종명</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">location</td>
+                <td>지역</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>code</td>
+                <td>지역 코드</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>지역명</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">job-type</td>
+                <td>근무형태 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table1">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>code</td>
+                <td>근무형태 코드</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>근무형태 값</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">job-category</td>
+                <td><span class="type_red"><h4>2021년 11월 30일 이후 제거 예정입니다. job_mid_cd, job_code로 변경하여 사용해주세요.</h4></span>직종</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>code</td>
+                <td>직종 코드</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>직종명</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">job-mid-code</td>
+                <td>상위 직무 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table5">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>code</td>
+                <td>상위 직무 코드</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>상위 직무명</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">job-code</td>
+                <td>직무 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table5">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>code</td>
+                <td>직종 코드</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>직무명</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2"><span class="badge type_purple">선택</span> industry-keyword-code</td>
+                <td>업종 키워드 코드 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table3">코드표</a></span> <br>fields=keyword-code</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2"><span class="badge type_purple">선택</span> job-category-keyword-code</td>
+                <td><span class="type_red"><h4>2021년 11월 30일 이후 제거 예정입니다. job_mid_cd, job_code로 변경하여 사용해주세요.</h4></span>
+                    직종 키워드<br>fields=keyword-code</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2"><span class="badge type_purple">선택</span> job-code-keyword-code</td>
+                <td>직무 키워드 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table5">코드표</a></span> <br>fields=keyword-code</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">experience-level</td>
+                <td>경력</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>code</td>
+                <td>경력 코드
+                    <ul>
+                        <li>1 : 신입</li>
+                        <li>2 : 경력</li>
+                        <li>3 : 신입/경력</li>
+                        <li>0 : 경력무관</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>min</td>
+                <td>경력 최소 값</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>max</td>
+                <td>경력 최대 값</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>경력 값</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">required-education-level</td>
+                <td>학력 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table1">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>code</td>
+                <td>학력 코드</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+                <td>name</td>
+                <td>학력 값</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">id</td>
+                <td>공고 번호</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">posting-timestamp</td>
+                <td>게시일의 Unix timestamp</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3"><span class="badge type_purple">선택</span> posting-date</td>
+                <td>날짜/시간 형식의 게시일 (2021-07-13T13:15:17+0900)<br>fields=posting-date</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">modification-timestamp</td>
+                <td>수정일 Unix timestamp </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">opening-timestamp</td>
+                <td>접수 시작일의 Unix timestamp </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">expiration-timestamp</td>
+                <td>마감일의 Unix timestamp </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3"><span class="badge type_purple">선택</span> expiration-date</td>
+                <td>날짜/시간 형식의 마감일<br>fields=expiration-date</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">close-type</td>
+                <td>마감일 형식</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">code</td>
+                <td>마감일 코드
+                    <ul>
+                        <li>1 : 접수 마감일</li>
+                        <li>2 : 채용시</li>
+                        <li>3 : 상시</li>
+                        <li>4 : 수시</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">name</td>
+                <td>마감일 값</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">keyword</td>
+                <td>키워드</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3"><span class="badge type_purple">선택</span> read-cnt</td>
+                <td>조회수<br>fields=count</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3"><span class="badge type_purple">선택</span> apply-cnt</td>
+                <td>지원자수<br>fields=count</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="3">salary</td>
+                <td>연봉 <span class="badge_full type_code"><a href="https://oapi.saramin.co.kr/guide/code-table1">코드표</a></span></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">code</td>
+                <td>연봉 코드</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td colspan="2">name</td>
+                <td>연봉 값</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+                <h2 class="tit_section">Sample Output JSON</h2>
+                <pre class=" language-xml" tabindex="0">                    <code class=" language-xml">{
+  "jobs": {
+    "count": 2,
+    "start": 1,
+    "total": "7629",
+    "job": [
+      {
+        "url": "http://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=27614114&amp;utm_source=job-search-api&amp;utm_medium=api&amp;utm_campaign=saramin-job-search-api",
+        "active": 1,
+        "company": {
+          "detail": {
+            "href":"http://www.saramin.co.kr/zf_user/company-info/view?csn=1138600917&amp;utm_source=job-search-api&amp;utm_medium=api&amp;utm_campaign=saramin-job-search-api",
+            "name": "(주)사람인에이치알"
+          }
+        },
+        "position": {
+          "title": "(주)사람인에이치알 사무보조·문서작성 경력 채용합니다11212",
+          "industry": {
+            "code": "301",
+            "name": "솔루션·SI·ERP·CRM"
+          },
+          "location": {
+            "code": "101050,101060,101070",
+            "name": "서울 &gt; 관악구,서울 &gt; 광진구,서울 &gt; 구로구"
+          },
+          "job-type": {
+            "code": "1",
+            "name": "정규직"
+          },
+          "job-mid-code": {
+            "code": "22",
+            "name": "요리·제빵사·영양사"
+          },
+          "job-code": {
+            "code": "2323",
+            "name": "요리·제빵사·영양사"
+          },
+          "experience-level": {
+            "code": 2,
+            "min": 2,
+            "max": 3,
+            "name": "경력 2~3년"
+          },
+          "required-education-level": {
+            "code": "0",
+            "name": "학력무관"
+          }
+        },
+        "keyword": "SI·시스템통합,Excel·도표,PowerPoint,전산입력·편집",
+        "salary": {
+          "code": "6",
+          "name": "1,800~2,000만원"
+        },
+        "id": "27614114",
+        "posting-timestamp": "1559191564",
+        "posting-date": "2019-05-30T13:46:04+0900",
+        "modification-timestamp": "1559191564",
+        "opening-timestamp": "1559188800",
+        "expiration-timestamp": "1561820399",
+        "expiration-date": "2019-06-29T23:59:59+0900",
+        "close-type": {
+          "code": "1",
+          "name": "접수마감일"
+        },
+        "read-cnt": "0",
+        "apply-cnt": "0"
+      },
+      {
+        "url":"http://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=27614112&amp;utm_source=job-search-api&amp;utm_medium=api&amp;utm_campaign=saramin-job-search-api",
+        "active": 1,
+        "company": {
+          "detail": {
+            "href":"http://www.saramin.co.kr/zf_user/company-info/view?csn=1138600917&amp;utm_source=job-search-api&amp;utm_medium=api&amp;utm_campaign=saramin-job-search-api",
+            "name": "(주)사람인테스트계정04"
+          }
+        },
+        "position": {
+          "title": "건축·인테리어·설계 외 2개 부문 담당자 모집 공고123",
+          "industry": {
+            "code": "1005",
+            "name": "연구소·컨설팅·조사"
+          },
+          "location": {
+            "code": "101070",
+            "name": "서울 &gt; 구로구"
+          },
+          "job-type": {
+            "code": "1",
+            "name": "정규직"
+          },
+          "job-category": {
+            "code": "102,308,902",
+            "name": "총무·법무·사무,전기·전자·제어,건축·인테리어·설계"
+          },
+          "industry-keyword-code": "100501",
+          "job-category-keyword-code": "10221,30810,90214",
+          "experience-level": {
+            "code": 1,
+            "min": 0,
+            "max": 0,
+            "name": "신입"
+          },
+          "required-education-level": {
+            "code": "0",
+            "name": "학력무관"
+          }
+        },
+        "keyword": "연구소,전기공사,창호공사,항공사무",
+        "salary": {
+          "code": "4",
+          "name": "1,400~1,600만원"
+        },
+        "id": "27614112",
+        "posting-timestamp": "1559175921",
+        "posting-date": "2019-05-30T09:25:21+0900",
+        "modification-timestamp": "1559175921",
+        "opening-timestamp": "1559174400",
+        "expiration-timestamp": "1561820399",
+        "expiration-date": "2019-06-29T23:59:59+0900",
+        "close-type": {
+          "code": "1",
+          "name": "접수마감일"
+        },
+        "read-cnt": "0",
+        "apply-cnt": "0"
+      }
+    ]
+  }
+}</code>
+                </pre>
+                <div>
+        <h2 class="tit_section">에러 출력 결과(Error Response Elements)</h2>
+
+        <table class="tbl tbl_list">
+            <colgroup>
+                <col style="width:5%">
+                <col style="width:5%">
+                <col style="width:50%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">Element</th>
+                <th scope="col"></th>
+                <th scope="col">Definition</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="3">result</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>code</td>
+                <td>
+                    <ul>
+                        <li>1 : access-key 미입력</li>
+                        <li>2 : 유효하지 access-key</li>
+                        <li>3 : 유효하지 request param</li>
+                        <li>99 : 오류 발생</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>message</td>
+                <td>오류 메시지</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2 class="tit_section">Sample Output JSON</h2>
+        <pre class=" language-xml" tabindex="0">            <code class=" language-xml">{
+  "code": 1,
+  "message": "access-key를 입력해 주세요."
+}</code></pre>
+
+    </div>
+            </div>
+        </div>
+    </main>
+</div>
+        </div>
+        <!-- content end -->
+
+        <!-- footer -->
+        
+
+        <footer class="wrap_footer">
+            <p class="copyright">Copyright © <a href="http://www.saramin.co.kr/" target="_blank">(주)사람인HR</a>. All rights reserved.</p>
+        </footer>
+
+        
+
+    
+        <!-- footer end -->
+
+        
+    
+
+
+</body></html>

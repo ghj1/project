@@ -1,0 +1,1088 @@
+@charset "utf-8";
+/* sticky reset */
+.sticky_assist div,
+.sticky_assist dl,
+.sticky_assist dt,
+.sticky_assist dd,
+.sticky_assist ul,
+.sticky_assist ol,
+.sticky_assist li,
+.sticky_assist h1,
+.sticky_assist h2,
+.sticky_assist h3,
+.sticky_assist h4,
+.sticky_assist h5,
+.sticky_assist h6,
+.sticky_assist form,
+.sticky_assist button {margin:0;padding:0;font-family:"Malgun Gothic",dotum,gulim,sans-serif}
+.sticky_assist fieldset,
+.sticky_assist img {border:0}
+.sticky_assist strong,
+.sticky_assist b {font-weight:bold}
+.sticky_assist ol,
+.sticky_assist ul,
+.sticky_assist li {list-style:none}
+.sticky_assist a {color:#444;text-decoration:none}
+.sticky_assist section,
+nav,
+article {display:block}
+.sticky_assist textarea,
+.sticky_assist select {line-height:normal}
+.sticky_assist button {border:0;line-height:normal;background:transparent;cursor:pointer}
+.sticky_assist .hidden,
+.sticky_assist .blind {overflow:hidden;clip:rect(1px,1px,1px,1px);position:absolute !important;width:1px;height:1px}
+.sticky_assist .ellipsis {overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .noSelect {-webkit-user-select:none;-moz-user-select:none;user-select:none;-o-user-select:none;-khtml-user-select:none}
+.sticky_assist .btn_scrap {position:static}
+.sticky_assist .item {margin:0;height:auto;background:0}
+.sticky_assist input[type=text]::-ms-clear {display:none}
+
+/* Pagination */
+.sticky_assist .pagiNation {font-size:13px;letter-spacing:-1px;text-align:center}
+.sticky_assist .pagiNation>a,
+.sticky_assist .pagiNation>button,
+.sticky_assist .pagiNation>span {border:0;background:none}
+.sticky_assist .pagiNation .btnPrev {display:inline-block;margin-right:12px;padding-left:10px;width:40px;height:35px;box-sizing:border-box;line-height:33px;vertical-align:middle;background:url(//www.saraminimage.co.kr/sri/company/applicant/btn_page_prev.png) 0 50% no-repeat}
+.sticky_assist .pagiNation .btnNext {display:inline-block;margin-left:12px;padding-right:10px;width:40px;height:35px;box-sizing:border-box;line-height:33px;vertical-align:middle;background:url(//www.saraminimage.co.kr/sri/company/applicant/btn_page_next.png) 100% 50% no-repeat}
+.sticky_assist .pagiNation span.page,
+.sticky_assist .pagiNation button.page,
+.sticky_assist .pagiNation a.page {display:inline-block;margin:0;width:33px;height:35px;box-sizing:border-box;line-height:33px;vertical-align:middle}
+.sticky_assist .pagiNation span.page {border:1px solid #313131;color:#313131;font-size:15px;font-weight:bold}
+
+/* Buttons */
+/* button - size */
+.sticky_assist .sriBtnL {display:inline-block;padding:0 12px 4px;height:50px;border:1px solid #686868;border-radius:5px;box-sizing:border-box;color:#fff;font-size:16px;font-weight:bold;letter-spacing:-1px;line-height:46px;text-align:center;background-color:#686868}
+.sticky_assist .sriBtnM {display:inline-block;padding:0 12px 4px;height:40px;border:1px solid #686868;border-radius:5px;box-sizing:border-box;color:#fff;font-size:14px;font-weight:bold;letter-spacing:-1px;line-height:36px;text-align:center;background-color:#686868}
+.sticky_assist .sriBtnS {display:inline-block;padding:0 12px 3px;height:32px;border:1px solid #686868;border-radius:5px;box-sizing:border-box;color:#fff;font-size:14px;font-weight:bold;letter-spacing:-1px;line-height:29px;text-align:center;background-color:#686868}
+/* button - color */
+.sticky_assist [class*="sriBtn"].bgBlack {border:1px solid #444;color:#fff;background-color:#333}
+.sticky_assist [class*="sriBtn"].bgWhite {border:1px solid #333;color:#222;background-color:#fff}
+.sticky_assist [class*="sriBtn"].bgGray {border:1px solid #555;color:#fff;background-color:#555}
+.sticky_assist [class*="sriBtn"].bgPink {border:1px solid #ff5656;color:#fff;background-color:#dc3434} /* WMG-25550 */
+.sticky_assist button[class*="sriBtn"]:disabled,
+.sticky_assist a[class*="sriBtn"].disabled {border:1px solid #e3e3e3;color:#999;background-color:#e3e3e3;cursor:default}
+.sticky_assist [class*="sriBtn"].colorBlue {border:1px solid #2365f2;color:#fff;background-color:#2365f2}
+.sticky_assist [class*="sriBtn"].colorRed {border:1px solid #ff3b50;color:#fff;background-color:#ff3b50}
+
+/* WMG-25046 */
+/* button - ico */
+.sticky_assist .icoPrev:before,
+.sticky_assist .icoNext:after {display:inline-block;position:relative;border-top:1px solid #444;content:""}
+.sticky_assist .icoPrev:before {border-left:1px solid #444;-webkit-transform:translate(50%, -50%) rotate(-45deg);-ms-transform:translate(50%, -50%) rotate(-45deg);transform:translate(50%, -50%) rotate(-45deg)}
+.sticky_assist .icoNext:after {border-right:1px solid #444;-webkit-transform:translate(-50%, -50%) rotate(45deg);-ms-transform:translate(-50%, -50%) rotate(45deg);transform:translate(-50%, -50%) rotate(45deg)}
+.sticky_assist .sriBtnL.icoPrev:before,
+.sticky_assist .sriBtnL.icoNext:after {top:4px;width:9px;height:9px}
+.sticky_assist .sriBtnL.icoPrev:before {margin-right:15px}
+.sticky_assist .sriBtnL.icoNext:after {margin-left:15px}
+/* // WMG-25046 */
+
+/* Form Elements */
+.sticky_assist span.sriInpRdo,
+.sticky_assist span.sriInpChk,
+.sticky_assist input.sriInpTypo,
+.sticky_assist .sriInpFile,
+.sticky_assist .sriInpSel,
+.sticky_assist [class*="sriBtn"] {vertical-align:middle}
+
+/* input text */
+.sticky_assist input.sriInpTypo {padding:0 13px 2px;height:40px;border:1px solid #ddd;border-radius:5px;box-sizing:border-box;color:#222;font-family:"Malgun Gothic",gulim,dotum,sans-serif;font-size:14px;letter-spacing:-1px;line-height:36px;vertical-align:middle;background-color:#fff}
+.sticky_assist input.sriInpTypo:-ms-input-placeholder {color:#888}
+.sticky_assist input.sriInpTypo::placeholder {color:#888;opacity:1}
+/*.sticky_assist input.sriInpTypo:not([value=""]),*/
+.sticky_assist input.sriInpTypo:focus,
+.sticky_assist input.sriInpTypo:hover {border-color:#444}
+.sticky_assist input.sriInpTypo:disabled,
+.sticky_assist input.sriInpTypo:not(.type_calendar):read-only,
+.sticky_assist input.sriInpTypo[disabled] {border-color:#ddd;color:#888;background-color:#efefef}
+.sticky_assist input.sriInpTypo.invalid {border-color:#ff3b50;background-color:#fff9e5}
+.sticky_assist input.sriInpTypo.type_calendar {padding-right:40px;width:135px;color:#444;letter-spacing:0;background:#fff url(//www.saraminimage.co.kr/sri/common/ico/ico_sticky_calendar.png) no-repeat 89% 49%}
+.sticky_assist input.sriInpTypo.type_calendar.invalid {border-color:#ff3b50;background-color:#fff9e5}
+.sticky_assist input.sriInpTypo.type_calendar:disabled {border-color:#ddd;color:#888;background-color:#efefef}
+.sticky_assist input.sriInpTypo.type_calendar[disabled] {border-color:#ddd;color:#888;background-color:#efefef}
+
+/* textarea */
+.sticky_assist textarea.sriInpTypo {padding:7px 13px 2px;height:40px;border:1px solid #ddd;border-radius:5px;box-sizing:border-box;color:#222;font-family:"Malgun Gothic",gulim,dotum,sans-serif;font-size:14px;letter-spacing:-1px;line-height:21px;vertical-align:middle;background-color:#fff;resize:none}
+.sticky_assist textarea.sriInpTypo:-ms-input-placeholder {color:#888}
+.sticky_assist textarea.sriInpTypo::placeholder {color:#888;opacity:1}
+.sticky_assist textarea.sriInpTypo:focus,
+.sticky_assist textarea.sriInpTypo:hover {border-color:#444}
+.sticky_assist textarea.sriInpTypo:disabled,
+.sticky_assist textarea.sriInpTypo:not(.type_calendar):read-only,
+.sticky_assist textarea.sriInpTypo[disabled] {border-color:#ddd;color:#888;background-color:#efefef}
+.sticky_assist textarea.sriInpTypo.invalid {border-color:#ff3b50;background-color:#fff9e5}
+
+/* select */
+.sticky_assist .sriInpSel {display:inline-block;height:40px;border:1px solid #ddd;border-radius:5px;box-sizing:border-box;vertical-align:middle;background-color:#fff}
+.sticky_assist .sriInpSel:hover {border-color:#444}
+.sticky_assist .sriInpSel>select {padding:5px 33px 8px 12px;width:100%;height:38px;border:none;box-sizing:border-box;color:#222;font-family:"Malgun Gothic",gulim,dotum,sans-serif;font-size:14px;letter-spacing:-1px;line-height:26px;text-align:left;vertical-align:top;background:url(//www.saraminimage.co.kr/sri/pattern/bg_select_default.png) no-repeat 100% -6px;-webkit-appearance:none;-moz-appearance:none}
+.sticky_assist .sriInpSel.disabled {border-color:#ddd;background-color:#efefef}
+.sticky_assist .sriInpSel.disabled>select {color:#888;background-position-y:-56px}
+.sticky_assist .sriInpSel.disabled>select:hover {border-color:inherit}
+.sticky_assist .sriInpSel select:disabled::-ms-value {color:#888}
+.sticky_assist .sriInpSel.invalid {border-color:#ff3b50;background-color:#fff9e5}
+/* ie9,10,11 */
+.sticky_assist .sriInpSel>select::-ms-expand {opacity:0}
+.sticky_assist .sriInpSel>select {padding:8px 12px 9px\0/}  /* ie9 */
+.sticky_assist _:-ms-lang(x),
+.sriInpSel>select {padding:8px 12px 9px}  /* ie10 */
+.sticky_assist _:-ms-fullscreen,
+:root .sriInpSel>select {padding:8px 12px 9px}  /* ie11 */
+
+/* radio & checkbox */
+.sticky_assist span.sriInpRdo,
+.sticky_assist span.sriInpChk {display:inline-block;position:relative}
+.sticky_assist span.sriInpRdo>input,
+.sticky_assist span.sriInpChk>input {position:absolute;top:0;width:1px;height:1px;outline:none;opacity:0;pointer-events:none}
+.sticky_assist span.sriInpRdo>.lbl,
+.sticky_assist span.sriInpChk>.lbl {display:inline-block;color:#222;font-size:14px;letter-spacing:-1px;line-height:21px;vertical-align:top}
+.sticky_assist span.sriInpRdo>.lbl:after,
+.sticky_assist span.sriInpChk>.lbl:after {display:table;clear:both;content:"";table-layout:fixed}
+
+.sticky_assist span.sriInpChk>.lbl:before {float:left;margin:0 9px 0 0;vertical-align:top;background:url(//www.saraminimage.co.kr/sri/common/spr/spr_sticky_check.png) no-repeat 0 0;content:""}
+.sticky_assist span.sriInpRdo>input:checked+.lbl:before,
+.sticky_assist span.sriInpChk>input:checked+.lbl:before {background-position-y:-25px}
+.sticky_assist.company span.sriInpRdo>input:checked+.lbl:before,
+.sticky_assist.company span.sriInpChk>input:checked+.lbl:before {background-position-y:-50px}
+.sticky_assist span.sriInpRdo>input:disabled+.lbl:before,
+.sticky_assist span.sriInpChk>input:disabled+.lbl:before {background-position-y:-75px}
+.sticky_assist span.sriInpRdo>input:checked:disabled+.lbl:before,
+.sticky_assist span.sriInpChk>input:checked:disabled+.lbl:before {background-position-y:-100px}
+.sticky_assist span.sriInpRdo.invalid>input+.lbl:before,
+.sticky_assist span.sriInpChk.invalid>input+.lbl:before {background-position-y:-125px}
+.sticky_assist span.sriInpRdo>input:focus+.lbl:before,
+.sticky_assist span.sriInpChk>input:focus+.lbl:before {outline:5px auto -webkit-focus-ring-color;outline:1px dotted invert}
+.sticky_assist span.sriInpRdo>.lbl.reverse:before,
+.sticky_assist span.sriInpChk>.lbl.reverse:before {float:right;margin:0 0 0 9px}
+.sticky_assist span.sriInpRdo>.lbl.hide,
+.sticky_assist span.sriInpChk>.lbl.hide {visibility:visible;overflow:visible;position:static;top:auto;left:auto;width:auto;height:auto;font-size:0}
+.sticky_assist span.sriInpRdo>.lbl.hide:before,
+.sticky_assist span.sriInpChk>.lbl.hide:before {margin:0}
+/* radio */
+.sticky_assist .sriInpRdo input+.lbl:before {width:22px;height:22px;background-position-x:-40px}
+/* checkbox */
+.sticky_assist .sriInpChk input+.lbl:before {margin-top:1px;width:20px;height:20px;background-position-x:0}
+/* radio button switch */
+.sticky_assist .sriInpRdoSw {display:inline-block;width:100%;vertical-align:middle}
+.sticky_assist .sriInpRdoSw:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .sriInpRdoSw .inOption {float:left;position:relative;width:50%}
+.sticky_assist .sriInpRdoSw .inOption+.inOption {margin-left:-1px}
+.sticky_assist .sriInpRdoSw .inOption:nth-child(1):nth-last-child(3),
+.sticky_assist .sriInpRdoSw .inOption:nth-child(2):nth-last-child(2),
+.sticky_assist .sriInpRdoSw .inOption:nth-child(3):nth-last-child(1) {width:calc(100% / 3)}
+.sticky_assist .sriInpRdoSw .inOption>input {position:absolute;top:0;width:1px;height:1px;outline:none;opacity:0;pointer-events:none}
+.sticky_assist .sriInpRdoSw .inOption>.lbl {display:inline-block;padding:8px 5px 10px;width:100%;height:40px;border:1px solid #ddd;box-sizing:border-box;color:#222;font-size:14px;letter-spacing:-0.5px;line-height:19px;text-align:center;vertical-align:top;background-color:#fff;cursor:pointer;user-select:none}
+.sticky_assist .sriInpRdoSw .inOption>.lbl>.txt {font-size:13px}
+.sticky_assist .sriInpRdoSw .inOption:first-child>.lbl {border-radius:5px 0 0 5px}
+.sticky_assist .sriInpRdoSw .inOption:last-child>.lbl {border-radius:0 5px 5px 0}
+.sticky_assist .sriInpRdoSw .inOption:nth-child(n + 2):after {position:absolute;top:0;left:-1px;z-index:2;width:2px;height:100%;content:""}
+.sticky_assist .sriInpRdoSw .inOption>input:focus+.lbl {outline:5px auto -webkit-focus-ring-color;outline:1px dotted invert}
+.sticky_assist .sriInpRdoSw .inOption>input:checked+.lbl {position:relative;z-index:2;border-color:#444;font-weight:bold}
+.sticky_assist .sriInpRdoSw .inOption>input:disabled+.lbl {border-color:#ddd;color:#888;background-color:#efefef;cursor:default}
+.sticky_assist .sriInpRdoSw.sizeL .inOption>.lbl {padding-top:11px;padding-bottom:11px;height:50px;line-height:26px}
+.sticky_assist .sriInpRdoSw.sizeL .inOption.max_height>.lbl {padding:8px 5px 10px;line-height:16px}
+
+/* file */
+.sticky_assist .sriInpFile {position:relative;padding-right:78px;box-sizing:border-box}
+.sticky_assist .sriInpFile input.sriInpTypo:disabled {width:100%;border-color:#ddd;color:#222;vertical-align:top;background-color:#fff}
+.sticky_assist .sriInpFile input.sriInpTypo[disabled] {width:100%;border-color:#ddd;color:#222;vertical-align:top;background-color:#fff}
+.sticky_assist .sriInpFile input.upload_hidden {position:absolute;top:0;right:0;z-index:-1;margin:0;padding:0;width:82px;height:100%;opacity:0;filter:alpha(opacity=0)}
+.sticky_assist .sriInpFile:not(.invalid):hover .sriInpTypo {border-color:#444}
+.sticky_assist .sriInpFile .lbl {overflow:hidden;position:absolute;top:0;right:0;width:82px;height:40px;text-align:center;vertical-align:top;cursor:pointer}
+.sticky_assist .sriInpFile .lbl>span {display:block;position:relative;z-index:2;width:100%;height:100%;border-radius:0 5px 5px 0;box-sizing:border-box;color:#fff;font-size:14px;font-weight:bold;letter-spacing:-1px;line-height:36px;vertical-align:top;background-color:#555}
+.sticky_assist .sriInpFile.invalid input.sriInpTypo:disabled {border-color:#ff3b50;background-color:#fff9e5}
+.sticky_assist .sriInpFile.invalid input.sriInpTypo[disabled] {border-color:#ff3b50;background-color:#fff9e5}
+
+/* input typo + button */
+.sticky_assist .sriTypoBtn {position:relative;padding-right:68px}
+.sticky_assist .sriTypoBtn .sriInpTypo {width:100%}
+.sticky_assist .sriTypoBtn .sriInpTypo+.sriBtnM {position:absolute;top:0;right:0;width:70px;border-top-left-radius:0;border-bottom-left-radius:0}
+
+/* invalid message */
+.sticky_assist em.msgInvalid {display:block;margin-top:5px;color:#f00;font-size:12px;letter-spacing:-1px;line-height:16px}
+.sticky_assist em.msgInvalid.error {display:inline-block}
+
+/* date picker */
+/* date picker + date picker */
+.sticky_assist .period {position:relative;margin-top:10px}
+.sticky_assist .period:before {display:block;position:absolute;left:calc(100% / 2 - 11px);width:22px;color:#333;font-size:14px;line-height:40px;text-align:center;content:"~"}
+.sticky_assist .period:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .period input.sriInpTypo.type_calendar {float:left;margin-right:11px;width:calc(100% / 2 - 11px)}
+.sticky_assist .period input.sriInpTypo.type_calendar:nth-last-of-type(1) {margin:0 0 0 11px}
+/* date picker + select */
+.sticky_assist .select_period {position:relative;margin-top:10px}
+.sticky_assist .select_period:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .select_period:first-of-type {margin-top:0}
+.sticky_assist .select_period [class*="sriInp"] {float:left}
+.sticky_assist .select_period input.sriInpTypo.type_calendar {width:160px}
+.sticky_assist .item_inp.edit>dd.select_period .sriInpSel {margin:0 0 0 8px;width:calc(100% - 168px)}
+/* calender month */
+.sticky_assist .sriDatepicker_month {display:block;position:absolute;top:40px;left:0;z-index:50;padding:15px;width:228px;border:1px solid #2f2f2f;box-sizing:border-box;font-size:0;background-color:#fff}
+.sticky_assist .sriDatepicker_month .area_year {position:relative;margin:3px 0 9px;height:28px;font-weight:bold}
+.sticky_assist .sriDatepicker_month .area_year a {display:block;position:absolute;top:0;padding:6px;width:16px;height:16px;background:url(//www.saraminimage.co.kr/ui/layout/mypage_2016/btn_cal_month.png) 0 0 no-repeat}
+.sticky_assist .sriDatepicker_month .area_year .year_prev {left:4px;background-position:8px 8px}
+.sticky_assist .sriDatepicker_month .area_year .year_next {right:4px;background-position:8px -42px}
+.sticky_assist .sriDatepicker_month .area_year .txt_year {margin:0 20px;font-size:16px;line-height:28px;text-align:center}
+.sticky_assist .sriDatepicker_month .area_month li {display:inline-block;padding:0 6px 5px;text-align:center}
+.sticky_assist .sriDatepicker_month .area_month li a {display:block;width:37px;height:25px;box-sizing:border-box;font-size:14px;line-height:23px}
+.sticky_assist .sriDatepicker_month .area_month li a.active {color:#fff;background-color:#5582db}
+.sticky_assist .sriDatepicker_month .area_month li a.today {background-color:#e7e9ee}
+
+/* table */
+.sticky_assist .sriTbl {border:1px solid #ebebeb;border-width:1px 0}
+.sticky_assist .sriTbl table {width:100%;border-spacing:0;border-collapse:collapse;table-layout:fixed}
+.sticky_assist .sriTbl th,
+.sticky_assist .sriTbl td {margin:0;padding:13px 15px 15px;box-sizing:border-box;color:#666;font-size:13px;letter-spacing:-0.5px;line-height:17px;text-align:left;word-wrap:break-word;word-break:break-all;background-color:#f7f7f7}
+.sticky_assist .sriTbl td {color:#333;font-size:14px;background:none}
+.sticky_assist .sriTbl .ellipsis {overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .sriTbl .txtCenter {text-align:center}
+.sticky_assist .sriTbl .txtLeft {text-align:left}
+.sticky_assist .sriTbl .txtRight {text-align:right}
+.sticky_assist .sriTbl .txtTop {vertical-align:top}
+
+
+
+/* sticky assist */
+.sticky_assist {position:fixed;right:30px;bottom:30px;z-index:150;width:320px;box-sizing:border-box}
+.sticky_assist .point {color:#dc3434}
+.sticky_assist .require {color:#f00}
+.sticky_assist .assist_contents {position:absolute;right:0;bottom:74px;width:320px;border-radius:6px;background:#fff;box-shadow:0 5px 40px 0 rgba(0, 0, 0, 0.16);-webkit-transition:opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;transition:opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;transition:opacity 0.3s ease-out, transform 0.3s ease-out;transition:opacity 0.3s ease-out, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);-webkit-transform-origin:right bottom;-ms-transform-origin:right bottom;transform-origin:right bottom;opacity:0;filter:alpha(opacity=0)}
+.sticky_assist .wrap_header {position:relative;padding:0 60px;width:100%;height:57px;border-radius:6px 6px 0 0;box-sizing:border-box;line-height:55px;text-align:center;background:#ff6d6a}
+.sticky_assist .wrap_header .title {color:#fff;font-size:18px;font-weight:bold;letter-spacing:-1px}
+.sticky_assist .wrap_header .btn_close_layer {position:absolute;top:0;right:0;width:60px;height:57px}
+.sticky_assist .wrap_header .btn_back {position:absolute;top:0;left:0;width:60px;height:57px}
+.sticky_assist .wrap_header .btn_close_layer:before {display:block;position:absolute;top:24px;left:18px;width:16px;height:10px;background:url(//www.saraminimage.co.kr/sri/common/spr/spr_sticky_assist_191025.png) no-repeat 0 -48px;content:""}
+.sticky_assist .wrap_header .btn_back:before {display:block;position:absolute;top:21px;left:18px;width:26px;height:16px;background:url(//www.saraminimage.co.kr/sri/common/spr/spr_sticky_assist_191025.png) no-repeat -31px -45px;content:""}
+.sticky_assist .section_view {overflow-y:auto;position:relative;height:667px;scrollbar-3dLight-Color:#f1f1f1;scrollbar-arrow-color:#f1f1f1;scrollbar-base-color:#f1f1f1;scrollbar-Face-Color:#cecece;scrollbar-Track-Color:#f1f1f1;scrollbar-DarkShadow-Color:#f1f1f1;scrollbar-Highlight-Color:#f1f1f1;scrollbar-Shadow-Color:#f1f1f1}
+.sticky_assist .section_view.type2 {height:547px}
+.sticky_assist .section_view.type3 {height:318px}
+.sticky_assist .section_view::-webkit-scrollbar {width:6px;height:6px}
+.sticky_assist .section_view::-webkit-scrollbar-track {background:#f1f1f1}
+.sticky_assist .section_view::-webkit-scrollbar-thumb {background:#cecece}
+
+/* WMG-26073 header type 추가 */
+.sticky_assist .wrap_header.type_white {padding:0 60px 0 64px;height:64px;line-height:62px;text-align:left;background:#fff}
+.sticky_assist .wrap_header.type_white .title {color:#222;font-size:16px}
+.sticky_assist .wrap_header.type_white .btn_close_layer:before,
+.sticky_assist .wrap_header.type_white .btn_back:before {background:url(//www.saraminimage.co.kr/sri/common/spr/spr_sticky_header.png) no-repeat}
+.sticky_assist .wrap_header.type_white .btn_close_layer {height:64px}
+.sticky_assist .wrap_header.type_white .btn_close_layer:before {top:30px;left:24px;background-position:0 0}
+.sticky_assist .wrap_header.type_white .btn_back {height:64px;border-radius:6px;background:#fff}
+.sticky_assist .wrap_header.type_white .btn_back:before {top:26px;left:24px;background-position:-20px 0}
+.sticky_assist.company .wrap_header.type_white {background-color:#fff}
+
+/* company */
+.sticky_assist.company {right:84px;z-index:500}
+.sticky_assist.company .wrap_header,
+.sticky_assist.company .wrap_btns .btn_assist.on {background-color:#00c4ce} /* WMG-26073 수정 */
+.sticky_assist.company .point {color:#00a9b2}
+.sticky_assist.company .search_assist .btn_more {background:#00c4ce} /* WMG-26073 추가 */
+.sticky_assist.company .search_assist .input_search.on+.btn_search:before {background-position:-40px -20px} /* WMG-26073 추가 */
+
+/* tooltip */
+.sticky_assist .wrap_tooltip {display:block;position:absolute;right:3px;bottom:74px;width:280px;border-radius:6px;box-sizing:border-box;background:#fff;box-shadow:0 0 10px 2px rgba(0, 0, 0, 0.2);cursor:default}
+.sticky_assist .wrap_tooltip:before {display:block;position:absolute;right:32px;bottom:-10px;width:0;height:0;border-width:0 12px 10px 0;border-style:solid;border-color:transparent #fff transparent transparent;content:""}
+.sticky_assist .wrap_tooltip .inner {padding:14px 32px 14px 20px;color:#444;font-size:15px;letter-spacing:-1px;line-height:22px}
+.sticky_assist .wrap_tooltip .btn_close {position:absolute;top:0;right:0;width:34px;height:32px}
+.sticky_assist .wrap_tooltip .btn_close:after {display:block;position:absolute;top:11px;right:12px;width:10px;height:10px;background:url(//www.saraminimage.co.kr/sri/common/spr/spr_sticky_assist_191025.png) no-repeat -72px -48px;content:""}
+.sticky_assist .wrap_tooltip.hide {display:none;-webkit-transition:opacity 0.5s ease-out, -webkit-transform 0.3s ease-in-out;transition:opacity 0.5s ease-out, transform 0.3s ease-in-out;-webkit-transform:translateY(0px);-ms-transform:translateY(0px);transform:translateY(0px);opacity:0;filter:alpha(opacity=0)}
+
+/* WMG-25674 추천공고 tooltip */
+.sticky_assist .wrap_tooltip.recommend_notice {background-color:#393b4f}
+.sticky_assist .wrap_tooltip.recommend_notice:before {border-color:transparent #393b4f transparent transparent}
+.sticky_assist .wrap_tooltip.recommend_notice .title {padding:7px 18px;border-bottom:1px solid rgba(151,151,151,0.3);color:#dc3434;font-size:13px;letter-spacing:-1px;line-height:22px}
+.sticky_assist .wrap_tooltip.recommend_notice .inner {padding:17px}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .table_box {display:table;position:relative;width:100%;table-layout:fixed}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .table_box .link_box {display:block;position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background-color:#fff;opacity:0}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .table_box .table_cell {display:table-cell;vertical-align:middle}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .table_box .table_cell.logo {width:74px}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .table_box .table_cell.txt {width:100%}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .table_box .table_cell.logo+.table_cell.txt {width:172px}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .table_box .table_cell.txt>div {position:relative}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .company_logo {width:65px;height:65px;border-radius:6px;font-size:0;line-height:65px;text-align:center;background-color:#fff}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .company_logo img {width:55px;height:19px;vertical-align:middle}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .company_name {display:block;overflow:hidden;width:calc(100% - 75px);color:#fff;font-size:13px;font-weight:bold;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .recommend_name {display:block;display:-webkit-box;overflow:hidden;max-height:43px;color:#fff;text-overflow:ellipsis;word-wrap:break-word;word-break:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.sticky_assist .wrap_tooltip.recommend_notice .recommend_info .d_day {display:block;position:absolute;top:2px;right:0;padding:0 11px 0 10px;height:18px;border-radius:9px;color:#fff;font-size:12px;line-height:16px;background-color:#dc3434}
+.sticky_assist .wrap_tooltip.recommend_notice .sri_btn_md {display:inline-block;margin-top:20px;width:100%}
+.sticky_assist .wrap_tooltip.recommend_notice .sri_btn_md span {width:100%;border-radius:4px;font-weight:bold}
+.sticky_assist .wrap_tooltip.recommend_notice .btn_close {width:35px;height:35px}
+.sticky_assist .wrap_tooltip.recommend_notice .btn_close:after {top:13px;right:12px;background:url(//www.saraminimage.co.kr/sri/common/btn/btn_close_10x10.png) no-repeat 0 0}
+
+/* content button */
+/* WMG-25789 */
+.sticky_assist .wrap_btns {position:absolute;right:0;bottom:0;width:auto;height:60px;text-align:right}
+.sticky_assist .wrap_btns .btn_assist {position:absolute;top:0;right:0;width:60px;height:60px;border-radius:30px;background:#e3e3e3;box-shadow:0 2px 16px 0 rgba(0, 0, 0, 0.3)}
+.sticky_assist .wrap_btns .btn_assist:after {display:block;position:absolute;top:50%;left:50%;margin:-15px 0 0 -18px;width:36px;height:30px;background:url(//www.saraminimage.co.kr/sri/common/spr/spr_btn_sticky.png) no-repeat 0 0;content:""}
+.sticky_assist .wrap_btns .btn_assist.notification:after {background-position-y:0}
+.sticky_assist .wrap_btns .btn_assist.recommend:after {background-position-y:-37px}
+.sticky_assist .wrap_btns .btn_assist.talent:after {background-position-y:-76px}
+.sticky_assist .wrap_btns .btn_assist.help:after {background-position-y:-116px}
+.sticky_assist .wrap_btns .btn_assist:first-child {display:block;right:0;z-index:1;animation:sticky_bounce 0.5s 2 ease-out 0.2s;opacity:1}
+.sticky_assist .wrap_btns .btn_assist:nth-child(2),
+.sticky_assist .wrap_btns .btn_close:nth-child(2) {right:72px}
+.sticky_assist .wrap_btns .btn_assist:nth-child(3),
+.sticky_assist .wrap_btns .btn_close:nth-child(3) {right:144px}
+.sticky_assist .wrap_btns .btn_assist.on {background-color:#dc3434}
+.sticky_assist .wrap_btns .btn_assist {display:none}
+.sticky_assist .wrap_btns .btn_close {display:none;position:absolute;right:216px;bottom:0;width:30px;height:30px;border-radius:30px;background:#e3e3e3;box-shadow:0 2px 16px 0 rgba(0, 0, 0, 0.3)}
+.sticky_assist .wrap_btns .btn_close:after {display:block;position:absolute;top:50%;left:50%;margin:-6px 0 0 -6px;width:12px;height:12px;background:url(//www.saraminimage.co.kr/sri/common/ico/ico_sticky_close_12x12.png) no-repeat 0 0;content:""}
+.sticky_assist .wrap_btns .btn_close:hover {background-color:#dc3434}
+.sticky_assist .wrap_btns .btn_close:hover .blind {display:block;overflow:visible;clip:auto;position:absolute;top:-30px;left:-192px;z-index:1;width:194px;height:32px;color:#888;font-size:12px;letter-spacing:-1px;line-height:32px;text-align:center;background:url(//www.saraminimage.co.kr/sri/common/bg/bg_sticky_tooltip.png) no-repeat 0 0}
+.sticky_assist .wrap_btns.expand {width:255px}
+.sticky_assist .wrap_btns.expand .btn_assist {display:block}
+.sticky_assist .wrap_btns.expand .btn_assist:nth-child(2) {animation:sticky_expand_second 0.4s ease}
+.sticky_assist .wrap_btns.expand .btn_assist:nth-child(3) {animation:sticky_expand_third 0.4s ease}
+.sticky_assist .wrap_btns.expand .btn_close {display:block;animation:sticky_expand_fourth 0.4s ease}
+.sticky_assist.show .assist_contents {-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:1;filter:alpha(opacity=100)}
+.sticky_assist.show[data-num] .wrap_btns:before {display:none;position:absolute;top:-14px;z-index:1;width:0;height:0;border-width:8px 6px 0 6px;border-style:solid;border-color:#fff transparent transparent transparent;content:""}
+.sticky_assist.show[data-num="edge1"] .wrap_btns:before {display:block;top:-14px;right:35px;border-width:0 12px 10px 0;border-color:transparent #fff transparent transparent}
+.sticky_assist.show[data-num="edge2"] .wrap_btns:before {display:block;right:96px}
+.sticky_assist.show[data-num="edge3"] .wrap_btns:before {display:block;right:169px}
+/* // WMG-25789 */
+
+/* contents */
+.sticky_assist .section_view .wrap_scroll::-webkit-scrollbar {width:6px;height:6px}
+.sticky_assist .section_view .wrap_scroll::-webkit-scrollbar-track {background:#f1f1f1}
+.sticky_assist .section_view .wrap_scroll::-webkit-scrollbar-thumb {background:#cecece}
+.sticky_assist .box_tit {padding:24px 24px 0;color:#444;font-size:17px;font-weight:bold;letter-spacing:-1px;line-height:23px;word-wrap:break-word;word-break:break-all}
+.sticky_assist .box_tit .txt {margin-top:10px;font-size:14px;font-weight:normal;line-height:21px}
+.sticky_assist .box_tit .txt.mark {position:relative;padding-left:16px}
+.sticky_assist .box_tit .txt.mark:before {display:block;position:absolute;top:0;left:0;width:16px;color:#444;font-size:14px;line-height:20px;content:"\203B"}
+.sticky_assist .box_tit .name {display:inline-block;overflow:hidden;max-width:59%;text-overflow:ellipsis;vertical-align:text-bottom;white-space:nowrap}
+.sticky_assist .box_tit .txt strong {display:inline-block;overflow:hidden;max-width:88px;text-overflow:ellipsis;vertical-align:top;white-space:nowrap;word-wrap:normal}
+.sticky_assist .box_tit .txt_normal {margin-bottom:18px;font-weight:normal}/* WMG-27076 추가 */
+.sticky_assist .box_tit .txt_normal>b {display:block}/* WMG-27076 추가 */
+.sticky_assist .inner_view {padding:24px 24px 0}
+.sticky_assist .wrap_list {padding:4px 24px 0}
+.sticky_assist .wrap_list .item {position:relative;padding:20px 0;border-top:1px solid #ededed;text-align:left}
+.sticky_assist .wrap_list .item:first-child {border-top:0}
+.sticky_assist .box_inp {position:relative;padding-right:90px;width:100%;height:40px;border:1px solid #ddd;border-radius:5px;box-sizing:border-box}
+.sticky_assist .box_inp:hover {border-color:#555}
+.sticky_assist .box_inp .sriInpTypo {height:38px;border:none;letter-spacing:0;vertical-align:top}
+.sticky_assist .box_inp>button,
+.sticky_assist .box_inp>.btn_inbox {position:absolute;top:10px;right:12px;color:#444;font-size:13px;letter-spacing:-1px;line-height:17px;text-decoration:underline}
+.sticky_assist .sriTypoBtn .time {position:absolute;top:6px;right:81px}
+.sticky_assist .box {position:relative}
+.sticky_assist .box .lbl {display:inline-block;padding:5px 0;color:#333;font-size:12px;letter-spacing:-1px;line-height:16px}
+.sticky_assist .box:first-child .lbl {padding-top:0}
+.sticky_assist .wrap_inp {position:relative;margin-top:10px}
+.sticky_assist .box_scroll {display:none;overflow-y:auto;position:absolute;top:63px;z-index:2;padding-top:10px;width:100%;height:150px;box-sizing:border-box;background:#f9f9f9}
+.sticky_assist .box_scroll::-webkit-scrollbar {width:6px;height:6px}
+.sticky_assist .box_scroll::-webkit-scrollbar-track {background:#f1f1f1}
+.sticky_assist .box_scroll::-webkit-scrollbar-thumb {background:#cecece}
+.sticky_assist .box_scroll .btn_item {padding:5px 15px 6px;width:100%;box-sizing:border-box;color:#333;font-size:14px;letter-spacing:-1px;line-height:18px;text-align:left;vertical-align:top;cursor:default}
+.sticky_assist .box_scroll .selected .btn_item {background:#eee}
+.sticky_assist .box_scroll .btn_item .agency {display:block;padding-top:3px;color:#888;font-size:12px;letter-spacing:-1px;line-height:16px;text-align:left}
+.sticky_assist .box_scroll .no_result {padding:50px 15px 20px;color:#333;font-size:14px;letter-spacing:-1px;line-height:18px;text-align:center;cursor:default}
+.sticky_assist .box_scroll .no_result .match {display:block;padding-top:4px;width:100%;text-align:center;text-decoration:underline}
+.sticky_assist .box_scroll .match {font-weight:bold}
+.sticky_assist .box_scroll .btn_item>.txt {display:block;padding-top:2px;color:#666;font-size:12px;letter-spacing:-2px;line-height:16px}
+.sticky_assist .box_scroll .btn_item>.sub_txt {display:block;padding-top:2px;color:#888;font-size:11px;letter-spacing:-2px;line-height:15px}
+.sticky_assist .wrap_inp .box_scroll {top:40px}
+.sticky_assist .wrap_inp .box_scroll .btn_item {padding:8px 15px 9px}
+.sticky_assist .box_notice {margin-top:10px;padding:13px 15px 14px;color:#444;font-size:14px;letter-spacing:-1px;line-height:20px;background:#f8f8f8}
+.sticky_assist .box_notice>.tit,
+.sticky_assist .box_notice>.date {display:inline-block;color:#999;font-size:13px;line-height:17px}
+.sticky_assist .box_notice>.date {letter-spacing:0}
+.sticky_assist .box_notice>.date:before {display:inline-block;margin:0 8px 02px;width:1px;height:10px;vertical-align:bottom;background:#c2c2c2;content:""}
+.sticky_assist .box_notice>.txt {padding-top:6px;word-wrap:break-word;word-break:break-all}
+.sticky_assist .box_notice.edit_date {margin:20px 24px 0;padding:18px 15px}
+.sticky_assist .box_notice ol {counter-reset:list}
+.sticky_assist .box_notice li {position:relative;margin-top:5px;padding-left:12px;color:#666;font-size:13px;letter-spacing:-0.5px;line-height:17px}
+.sticky_assist .box_notice li:before {display:block;position:absolute;top:0;left:0;content:counter(list)". ";counter-increment:list}
+.sticky_assist .box_notice li:first-child {margin-top:0}
+.sticky_assist .wrap_item {padding:24px 24px 30px;background:#f7f7f7}
+.sticky_assist .wrap_item .item {margin-top:10px;padding:17px 20px;height:70px;border-radius:10px;box-sizing:border-box;background:#fff}
+.sticky_assist .wrap_item .item:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .wrap_item .item:first-child {margin-top:0}
+.sticky_assist .wrap_item .item>dt {float:left;color:#444;font-size:15px;font-weight:bold;letter-spacing:-1px;line-height:18px;text-align:left}
+.sticky_assist .wrap_item .item>dd {float:right;color:#666;font-size:14px;letter-spacing:-1px;line-height:37px;text-align:right}
+.sticky_assist .wrap_item .item>dd>em {padding-right:2px;font-size:28px;vertical-align:sub}
+.sticky_assist .wrap_item .sriBtnL {margin-top:20px;width:100%}
+.sticky_assist .wrap_item .no_item {color:#444;font-size:15px;letter-spacing:-1px;line-height:20px;text-align:center}
+.sticky_assist .btn_chk {display:inline-block;float:left;position:relative;margin:8px 0 0 8px}
+.sticky_assist .btn_chk>input {position:absolute;top:0;width:1px;height:1px;outline:none;opacity:0;pointer-events:none}
+.sticky_assist .btn_chk>.lbl {display:block;padding:0 12px;border:1px dashed #d5d5d5;border-radius:6px;box-sizing:border-box;color:#333;font-size:13px;letter-spacing:-1px;line-height:38px;text-align:center}
+.sticky_assist .btn_chk>input:checked+.lbl {border:1px solid #555;font-weight:bold}
+.sticky_assist .item_inp {position:relative;margin-top:12px}
+.sticky_assist .item_inp.border {padding-bottom:12px;border-bottom:1px solid #f2f6f9}
+.sticky_assist dl.item_inp:first-child {margin-top:0}
+.sticky_assist .item_inp>dt {padding-bottom:3px;color:#333;font-size:14px;letter-spacing:-1px;line-height:18px}
+.sticky_assist .item_inp>dd {color:#333;font-size:15px;font-weight:bold;line-height:20px;word-wrap:break-word;word-break:break-all}
+.sticky_assist .item_inp.edit>dt {padding-bottom:5px}
+.sticky_assist .item_inp.edit>dd {font-weight:normal}
+.sticky_assist .item_inp.edit>dd [class*="sriInp"] {margin-top:10px}
+.sticky_assist .item_inp.edit>dd [class*="sriInp"]:first-child {margin-top:0}
+.sticky_assist .item_inp.edit>dd.calendar {position:relative}
+.sticky_assist .item_inp.edit>dd.calendar input.sriInpTypo.type_calendar {background-position-x:94%}
+.sticky_assist .item_inp.has_chk {margin-top:16px}
+.sticky_assist .item_inp.has_chk>dt {padding-bottom:10px}
+.sticky_assist .item_inp.has_chk>dd.box_check {display:inline-block;position:absolute;top:-4px;right:0;text-align:right}
+.sticky_assist .item_inp .item_txt {padding-top:8px;color:#888;font-size:13px;letter-spacing:-0.5px;line-height:17px}
+.sticky_assist .item_inp_row {padding-top:15px}
+.sticky_assist .item_inp_row:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .item_inp_row>dt {float:left;width:72px;color:#333;font-size:13px;letter-spacing:-1px;line-height:40px}
+.sticky_assist .item_inp_row>dd {float:right;width:calc(100% - 72px);min-height:40px}
+.sticky_assist .item_inp_row>dd>.txt {display:block;padding:10px 0;line-height:20px}
+.sticky_assist .box_tit.complete {padding-top:270px;text-align:center}
+.sticky_assist .type2 .box_tit.complete {padding-top:210px}
+.sticky_assist .type3 .box_tit.complete {padding-top:92px}
+.sticky_assist .box_tit.complete+.area_btn {text-align:center}
+.sticky_assist .box_tit.complete+.area_btn .sriBtnL {float:none;width:132px}
+.sticky_assist .notice_txt {position:relative;margin-top:10px;padding-left:15px;color:#888;font-size:13px;letter-spacing:-0.5px;line-height:17px}
+.sticky_assist .notice_txt:before {display:block;position:absolute;top:0;left:0;color:#888;content:"\203B"}
+.sticky_assist .notice_txt.tit {margin-top:0;color:#444;font-size:14px;line-height:21px}
+.sticky_assist .link_bottom {display:block;position:absolute;bottom:20px;left:0;width:100%;color:#666;font-size:13px;letter-spacing:-1px;line-height:21px;text-align:center;text-decoration:underline}
+.sticky_assist .link_bottom.unfixed {position:relative;margin:10px 0 1px}
+.sticky_assist .box_tit.txt_btn {margin-bottom:-12px;padding-top:30px;color:#444;font-size:16px;font-weight:bold;letter-spacing:-1px;line-height:21px}
+.sticky_assist .area_btn {padding:30px 20px 24px}
+.sticky_assist .area_btn.narrow {padding-top:10px}
+.sticky_assist .area_btn.narrow_type2 {padding:10px 20px 16px}
+.sticky_assist .area_btn:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .area_btn .sriBtnL {float:left;margin:0 4px;padding:0;width:calc(100% / 2 - 8px)}
+.sticky_assist .area_btn.btn_full .sriBtnL,
+.sticky_assist .area_btn .sriBtnL:only-child {width:calc(100% - 8px)}
+.sticky_assist .area_btn.btn_full .sriBtnL+.sriBtnL {margin-top:10px}
+.sticky_assist .bottom_txt {padding-bottom:16px;color:#666;font-size:13px;letter-spacing:-1px;line-height:24px;text-align:center} /* WMG-26738 */
+.sticky_assist .bottom_txt .link {color:#666;text-decoration:underline}
+
+.sticky_assist .recruit_info .item .title {display:block;position:relative;padding-right:72px;color:#222;font-size:15px;font-weight:normal;letter-spacing:-1px;line-height:24px}
+.sticky_assist .recruit_info .item .title .date {position:absolute;top:0;right:0;color:#aaa;font-size:12px;letter-spacing:0}
+.sticky_assist .recruit_info .item .detail {padding-top:8px;color:#888;font-size:13px;letter-spacing:0;line-height:19px}
+.sticky_assist .recruit_info .item .detail:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .recruit_info .item .detail dt,
+.sticky_assist .recruit_info .item .detail dd {float:left;margin-top:10px;width:77px;word-wrap:break-word;word-break:break-all}
+.sticky_assist .recruit_info .item .detail dd {width:177px;color:#444}
+.sticky_assist .recruit_info .item .detail dt,
+.sticky_assist .recruit_info .item .detail dd:first-of-type {letter-spacing:-1px}
+.sticky_assist .recruit_info .noti_period {margin:0 24px;border-top:1px solid #ededed}
+.sticky_assist .recruit_info .noti_period>p {padding:18px 0;color:#666;font-size:14px;letter-spacing:-1px;line-height:21px;text-align:center}
+.sticky_assist .user_info .select_contact {padding:0 16px 30px}
+.sticky_assist .user_info .select_contact:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .user_info .select_contact .btn_check {display:block;float:left;position:relative}
+.sticky_assist .user_info .select_contact .phone .btn_check {margin-right:26px}
+.sticky_assist .user_info .select_contact .btn_check>input {position:absolute;top:0;width:1px;height:1px;outline:none;opacity:0;pointer-events:none;filter:alpha(opacity=0)}
+.sticky_assist .user_info .select_contact .btn_check>.lbl {display:inline-block;padding-top:73px;width:107px;height:107px;border-radius:50px;box-sizing:border-box;color:#9f9f9f;font-family:"Malgun Gothic",gulim,dotum,sans-serif;font-size:14px;font-weight:bold;letter-spacing:-1px;line-height:21px;text-align:center;vertical-align:top;background:#f7f7f7;cursor:pointer}
+.sticky_assist .user_info .select_contact .btn_check>input:disabled+.lbl {cursor:default}
+.sticky_assist .user_info .select_contact .btn_check>.lbl:before {display:block;position:absolute;top:0;left:0;width:28px;height:28px;background:url(//www.saraminimage.co.kr/sri/common/spr/spr_sticky_assist_191025.png) no-repeat -219px 0;content:""}
+.sticky_assist .user_info .select_contact .btn_check>.lbl:after {display:block;position:absolute;top:28px;background:url(//www.saraminimage.co.kr/sri/common/spr/spr_sticky_assist_191025.png) no-repeat;content:""}
+.sticky_assist .user_info .select_contact .phone .btn_check>.lbl:after {left:41px;width:25px;height:41px;background-position:-40px 0}
+.sticky_assist .user_info .select_contact .mail .btn_check>.lbl:after {left:37px;width:35px;height:35px;background-position:-130px -6px}
+.sticky_assist .user_info .select_contact .btn_check>input:checked+.lbl {color:#444}
+.sticky_assist .user_info .select_contact .btn_check>input:checked+.lbl:before {background-position-x:-181px}
+.sticky_assist .user_info .select_contact .phone .btn_check>input:checked+.lbl:after {background-position-x:0}
+.sticky_assist .user_info .select_contact .mail .btn_check>input:checked+.lbl:after {background-position-x:-80px}
+.sticky_assist .user_info .check_info dl {position:relative}
+.sticky_assist .user_info .check_info dl.mail {margin-top:14px}
+.sticky_assist .user_info .check_info dl>.tit {padding-bottom:6px;color:#333;font-size:12px;letter-spacing:-1px;line-height:16px}
+.sticky_assist .user_info .check_info dl>.info {position:relative;padding-right:56px}
+.sticky_assist .user_info .check_info .info .data {display:block;font-size:15px;letter-spacing:0;line-height:20px;word-wrap:break-word;word-break:break-all}
+.sticky_assist .user_info .check_info .info .sriBtnS {position:absolute;right:0;bottom:0}
+.sticky_assist .user_info .check_info dl>.info.hide {display:none}
+.sticky_assist .user_info .check_info dl>.info.hide+.certification {display:block}
+.sticky_assist .user_info .certification {display:none}
+.sticky_assist .user_info .certification .request {margin-bottom:10px}
+.sticky_assist .check_resume>.txt {color:#444;font-size:15px;letter-spacing:-1px;line-height:23px}
+.sticky_assist .check_resume .box_notice {margin-top:25px}
+.sticky_assist .job_type {padding:7px 24px 0 16px}
+.sticky_assist .job_type:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .job_type .btn_chk {width:calc(100% / 2 - 8px)}
+.sticky_assist .incomplete_resume .box_notice {margin-top:0;padding:9px 15px;color:#444;font-size:15px;line-height:22px;text-align:center}
+
+/* company */
+.sticky_assist .company_certification .info_agree {position:relative;padding-top:12px}
+.sticky_assist .company_certification .info_agree>.tit {color:#333;font-size:14px;font-weight:normal;letter-spacing:-1px;line-height:18px}
+.sticky_assist .company_certification .info_agree .sriInpChk {position:absolute;top:12px;right:0}
+.sticky_assist .wrap_item.s_point {margin-top:24px}
+.sticky_assist .insatong_option {padding-left:16px}
+.sticky_assist .insatong_option .question {display:block;padding:0 0 7px 8px;color:#333;font-size:15px;line-height:20px}
+.sticky_assist .insatong_option .options:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .save_search_option {padding:24px 24px 9px}
+.sticky_assist .save_search_option .item_inp dd.box_check {top:auto;bottom:-7px}
+.sticky_assist .payment {margin-top:24px;padding:0 24px}
+.sticky_assist .payment .box_inp {padding-right:70px}
+.sticky_assist .payment .item_inp_row:first-child {border-top:1px solid #ededed}
+.sticky_assist .payment .item_inp_row .my_point {display:block;padding-top:7px;color:#444;font-size:13px;font-weight:normal;letter-spacing:-1px;line-height:20px;text-align:right}
+.sticky_assist .payment .item_inp_row .my_point>em {padding:0 2px 0 5px;font-size:15px;font-weight:bold;vertical-align:bottom}
+.sticky_assist .payment .total_price {position:relative;margin-top:25px;padding-top:24px;height:67px;border-top:1px solid #ededed}
+.sticky_assist .payment .total_price:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .payment .total_price .tit {display:block;float:left;padding-top:22px;width:85px;color:#333;font-size:16px;letter-spacing:-1px}
+.sticky_assist .payment .price {float:left;width:calc(100% - 85px);color:#333;font-size:14px;text-align:right}
+.sticky_assist .payment .price .original {line-height:23px}
+.sticky_assist .payment .price .original>s {font-size:17px}
+.sticky_assist .payment .price .discount_price {font-weight:normal;line-height:45px}
+.sticky_assist .payment .price .discount_price>em {padding-right:3px;font-size:34px;letter-spacing:-1px;vertical-align:sub}
+.sticky_assist .payment .open_estimate {position:absolute;bottom:5px;left:0;color:#444;font-size:13px;letter-spacing:-1px;line-height:17px;text-decoration:underline}
+.sticky_assist .talent_info {border-top:1px solid #ebebeb}
+.sticky_assist .talent_info:first-child {border-top:0}
+.sticky_assist .talent_info>.tit {display:block;padding:30px 24px 0;color:#333;font-size:16px;letter-spacing:-1px;line-height:21px}
+.sticky_assist .talent_info>.tit .cnt {padding-left:10px;font-weight:normal;vertical-align:text-bottom}
+.sticky_assist .talent_info .item:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .talent_info .box_thumb {float:left;margin-right:8px;width:60px}
+.sticky_assist .talent_info .thumb {overflow:hidden;position:relative;width:100%;height:60px;border:solid 1px #e9e9e9;border-radius:50px;box-sizing:border-box}
+.sticky_assist .talent_info .thumb>img {display:block;position:absolute;top:-1px;left:50%;margin-left:-30px;max-width:60px}
+.sticky_assist .talent_info .box_thumb>em {display:block;padding-top:7px;color:#00a9b2;font-size:13px;font-weight:bold;letter-spacing:-1px;line-height:17px;text-align:center}
+.sticky_assist .talent_info .box_thumb>em.career {color:#007ed7}
+.sticky_assist .talent_info .profile {float:left;width:calc(100% - 68px)}
+.sticky_assist .talent_info .profile .name {color:#888;font-size:14px;letter-spacing:-1px;line-height:20px}
+.sticky_assist .talent_info .profile .name>strong {display:inline-block;overflow:hidden;padding-right:6px;max-width:72%;color:#333;font-size:15px;font-weight:bold;text-overflow:ellipsis;vertical-align:text-bottom;white-space:nowrap}
+.sticky_assist .talent_info .profile>p {overflow:hidden;padding-top:2px;color:#666;font-size:13px;letter-spacing:-1px;line-height:17px;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .talent_info .profile>p.emph {padding:6px 0 4px;color:#333;font-size:14px;line-height:18px}
+.sticky_assist .talent_info .no_list {padding:36px 0 44px;color:#666;font-size:13px;letter-spacing:-1px;text-align:center}
+
+/* recommend */
+.sticky_assist .recommend .box_tit .point {display:block}
+.sticky_assist .recommend .item .info_list {padding-bottom:27px;letter-spacing:-1px;line-height:22px}
+.sticky_assist .recommend .item .info_list .company {color:#333;font-size:14px;font-weight:bold}
+.sticky_assist .recommend .item .info_list .recruit_tit {padding-top:1px;color:#444;font-size:14px}
+.sticky_assist .recommend .item .info_list .sector {color:#444;font-size:12px;line-height:20px}
+.sticky_assist .recommend .item .info_list .sector span:before {display:inline-block;padding:0 5px 0 2px;color:#e9e9e9;font-size:10px;content:"|"}
+.sticky_assist .recommend .item .info_list .sector span:first-child:before {display:none}
+.sticky_assist .recommend .item .util {position:absolute;right:0;bottom:20px;left:0;height:19px;line-height:19px;text-align:right}
+.sticky_assist .recommend .item .util .btn_scrap {float:left;height:19px;line-height:19px;vertical-align:top;cursor:pointer}
+.sticky_assist .recommend .item .util .date {display:inline-block;height:15px;color:#444;font-size:11px;line-height:15px;vertical-align:top}
+
+/* notification */
+.sticky_assist .notification .item .info_list {padding-bottom:27px;letter-spacing:-1px;line-height:22px}
+.sticky_assist .notification .item .info_list .company {overflow:hidden;color:#333;font-size:14px;font-weight:bold;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .notification .item .info_list .recruit_tit {overflow:hidden;padding-top:1px;color:#444;font-size:14px;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .notification .item .info_list .sector {color:#444;font-size:12px;line-height:20px}
+.sticky_assist .notification .item .info_list .sector span:before {display:inline-block;padding:0 5px 0 2px;color:#e9e9e9;font-size:10px;content:"|"}
+.sticky_assist .notification .item .info_list .sector span:first-child:before {display:none}
+.sticky_assist .notification .item .util {position:absolute;right:0;bottom:20px;left:0;height:19px;line-height:19px;text-align:right}
+.sticky_assist .notification .item .util .btn_scrap {float:left;height:19px;line-height:19px;vertical-align:top;cursor:pointer}
+.sticky_assist .notification .item .util .date {display:inline-block;height:15px;color:#444;font-size:11px;line-height:15px;vertical-align:top}
+.sticky_assist .notification .language_exam {padding:4px 24px 0}
+.sticky_assist .notification .language_exam>.box:first-child {margin-top:0}
+.sticky_assist .notification .language_exam .obtain {position:relative}
+.sticky_assist .notification .language_exam .obtain .btn_calendar {position:absolute;right:10px;bottom:6px;z-index:2;margin-top:5px;width:23px;height:24px;border:0;background:#fff url(//www.saraminimage.co.kr/sri/common/ico/ico_calendar.png) no-repeat 0 0}
+.sticky_assist .notification .language_exam .obtain+.msgInvalid {display:block}
+.sticky_assist .notification .edit_resume {padding:24px 24px 0}
+.sticky_assist .notification .edit_resume .box {position:relative;padding-top:20px}
+.sticky_assist .notification .edit_resume .box:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .notification .edit_resume .box .lbl {position:absolute;top:0;left:0}
+.sticky_assist .notification .edit_resume .box .sriInpTypo {float:left;padding-right:98px;width:212px;letter-spacing:0}
+.sticky_assist .notification .edit_resume .box .sriBtnM {margin-left:-2px}
+
+/* help (포장이사) WMG-26073 수정 */
+.sticky_assist .title.ico_help:before {position:absolute;top:16px;left:24px;width:32px;height:32px;border-radius:50%;background:url(//www.saraminimage.co.kr/sri/common/ico/ico_sticky_mini.png) no-repeat;background-color:#dc3434;content:""}
+.sticky_assist.company .title.ico_help:before {background-color:#00c4ce}
+.sticky_assist.company .title.ico_help:after {display:inline-block;margin:-10px 0 0 6px;width:28px;height:17px;vertical-align:middle;background:url(//www.saraminimage.co.kr/sri/common/ico/ico_sticky_beta.png) no-repeat;content:""}
+.sticky_assist .section_view.help {overflow-y:hidden;height:576px}
+.sticky_assist .help .bg_inner {background-color:transparent;background-image:url(//www.saraminimage.co.kr/sri/common/spr/spr_assist.png);background-repeat:no-repeat}
+.sticky_assist .help .bg_before:before,
+.sticky_assist .help .bg_after:after {display:block;background-color:transparent;background-image:url(//www.saraminimage.co.kr/sri/common/spr/spr_assist.png);background-repeat:no-repeat;content:""}
+.sticky_assist .help .inner_view {padding-top:0}
+.sticky_assist .help .box_tit {position:relative;padding:9px 24px 24px}
+.sticky_assist .help .box_tit .link_history {position:absolute;bottom:22px;right:24px;padding:1px 14px;height:28px;border-radius:14px;border:1px solid #e1e1e1;box-sizing:border-box;font-weight:normal;font-size:12px;line-height:24px;letter-spacing:-1px;background:#fff}
+.sticky_assist .help .box_tit .link_history:hover {border-color:#bbb}
+.sticky_assist .help .box_tit.ready {display:block;visibility:hidden;opacity:0}
+.sticky_assist .help .wrap_scroll {overflow:hidden;overflow-y:auto;height:514px}
+.sticky_assist .help .list_assist {min-height:415px;border-bottom:1px solid #ededed}
+.sticky_assist .help .list_assist .summary {padding:24px 24px 8px;color:#444;font-size:17px;letter-spacing:-1px;line-height:23px}
+.sticky_assist .help .list_assist .summary .keyword {display:inline-block;font-weight:bold;word-wrap:break-word;word-break:break-all}
+.sticky_assist .help .list_assist .summary .count {color:#4876ef;letter-spacing:0}
+.sticky_assist .help .list_assist ul {padding:0 24px}
+.sticky_assist .help .list_assist li {border-top:1px solid #ededed}
+.sticky_assist .help .list_assist li:first-child {border-top:0}
+.sticky_assist .help .list_assist .link {display:block;padding:16px 0 14px}
+.sticky_assist .help .list_assist dl {position:relative;font-size:0}
+.sticky_assist .help .list_assist dt {overflow:hidden;position:relative;margin-bottom:5px;padding-left:19px;color:#444;font-size:14px;letter-spacing:-1px;line-height:21px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.sticky_assist .help .list_assist dd {display:inline-block;position:relative;color:#949494;font-size:13px;letter-spacing:-1px;line-height:20px;vertical-align:top}
+.sticky_assist .help .list_assist .answer {display:block;overflow:hidden;margin-bottom:10px;padding-left:19px;color:#444;font-size:14px;line-height:21px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.sticky_assist .help .list_assist .status {position:absolute;left:19px;bottom:0}
+.sticky_assist .help .list_assist .status.complete {color:#4876ef}
+.sticky_assist .help .list_assist .category {overflow:hidden;padding-left:19px;width:73%;box-sizing:border-box;text-overflow:ellipsis;white-space:nowrap;word-break:break-all;word-wrap:normal}
+.sticky_assist .help .list_assist .status+.category {padding-left:80px;text-align:right;text-overflow:initial}
+.sticky_assist .help .list_assist .status+.category>.ellipsis {display:inline-block;max-width:100%;text-align:left;vertical-align:top}
+.sticky_assist .help .list_assist .date {margin-left:8px;padding-left:10px;width:60px;box-sizing:border-box;letter-spacing:0}
+.sticky_assist .help .list_assist .date:before {position:absolute;top:3px;left:0;width:1px;height:13px;background:#e6e6e6;content:""}
+.sticky_assist .help .list_assist dt:before,
+.sticky_assist .help .list_assist .answer:before {position:absolute;top:0;left:0;color:#4876ef;font-size:14px;line-height:21px;text-decoration:none;content:"Q"}
+.sticky_assist .help .list_assist .answer:before {left:1px;content:"A"}
+.sticky_assist .help .list_assist .pagiNation {position:relative;padding:20px 0 30px;border-top:1px solid #ededed}
+.sticky_assist .help .list_assist .pagiNation:before {display:block;position:absolute;top:-1px;right:24px;left:24px;height:1px;background:#ededed;content:""}
+.sticky_assist .help .view_assist {min-height:415px}
+.sticky_assist .help .view_assist .summary {padding:19px 24px 14px;font-size:0;background:#f4f4f4}
+.sticky_assist .help .view_assist .summary .title {margin-bottom:15px;color:#222;font-size:21px;letter-spacing:-2px;line-height:30px}
+.sticky_assist .help .view_assist .summary .meta {display:inline-block;position:relative;margin-right:8px;padding-right:10px;color:#949494;font-size:13px;letter-spacing:-1px;line-height:17px;vertical-align:top}
+.sticky_assist .help .view_assist .summary .meta:after {position:absolute;top:3px;right:0;width:1px;height:13px;background:#ddd;content:""}
+.sticky_assist .help .view_assist .summary .meta.status {padding:0;width:58px}
+.sticky_assist .help .view_assist .summary .meta.status:after {content:none}
+.sticky_assist .help .view_assist .summary .status.complete {color:#4876ef}
+.sticky_assist .help .view_assist .summary .meta.category {overflow:hidden;width:63%;box-sizing:border-box;text-overflow:ellipsis;white-space:nowrap;word-break:break-all;word-wrap:normal}
+.sticky_assist .help .view_assist .summary .status+.category {width:37%;text-align:right;text-overflow:initial}
+.sticky_assist .help .view_assist .summary .status+.category>.ellipsis {display:inline-block;max-width:100%;text-align:left;vertical-align:top}
+.sticky_assist .help .view_assist .summary .meta.date {letter-spacing:0}
+.sticky_assist .help .view_assist .summary .link {display:inline-block;margin-top:1px;padding:2px 3px 3px;width:12px;height:12px;vertical-align:top}
+.sticky_assist .help .view_assist .summary .link:after {width:12px;height:12px;background-position:-50px 0}
+.sticky_assist .help .view_assist .help_content {padding:24px 24px 15px;color:#444;font-size:14px;letter-spacing:-1px;line-height:22px}
+.sticky_assist .help .view_assist .help_content img,
+.sticky_assist .help .view_assist .help_content table {margin:19px 0;max-width:100%}
+.sticky_assist .help .view_assist .txt_file {overflow:hidden;padding:13px 0 6px;color:#666;font-size:13px;line-height:22px;letter-spacing:-.5px;text-overflow:ellipsis;white-space:nowrap;vertical-align:top}
+.sticky_assist .help .view_assist .txt_file:before {display:inline-block;margin:4px 8px 0 0;width:14px;height:14px;vertical-align:top;background-position:-20px 0;content:""}
+.sticky_assist .help .view_assist .txt_file>a {text-decoration:underline}
+.sticky_assist .help .view_assist .box_answer {overflow:hidden;margin:0 24px 8px;padding:12px 12px 10px;border-radius:5px;background:#f8f8f8}
+.sticky_assist .help .view_assist .box_answer .txt {color:#444;font-size:14px;line-height:22px;letter-spacing:-2px}
+.sticky_assist .help .view_assist .box_answer .txt:before {padding-right:9px;color:#999;font-weight:bold;letter-spacing:-.5px;content:"A"}
+.sticky_assist .help .view_assist .box_answer .txt>p:first-child {display:inline}
+.sticky_assist .help .view_assist .box_answer img,
+.sticky_assist .help .view_assist .box_answer table {max-width:100%}
+.sticky_assist .help .view_assist .box_answer.complete .txt:before {color:#4876ef}
+.sticky_assist .help .view_assist .box_answer .date {float:right;padding-top:6px;width:60px;color:#999;font-size:13px;line-height:22px;letter-spacing:-.5px;text-align:right}
+.sticky_assist .help .view_assist .box_answer .txt_file {padding-top:6px;margin-right:60px}
+.sticky_assist .help .view_assist .box_answer .txt_file>a {color:#666}
+.sticky_assist .help .view_assist .box_answer.complete+.box_answer .txt:before {content:"Re"}
+.sticky_assist .help .view_assist .btn_new {padding:0 24px 29px}
+.sticky_assist .help .view_assist .btn_new .sriBtnM {display:block;width:100%;border-color:#ddd;color:#4876ef;background-color:#fff}
+.sticky_assist .help .view_assist .btn_new .sriBtnM:after {display:inline-block;margin-left:8px;width:12px;height:12px;vertical-align:middle;background-position:-50px -50px}
+.sticky_assist .help .footer_assist {padding:24px 24px 32px;background:#eee;text-align:center}
+.sticky_assist .help .footer_assist .copy {color:#666;font-size:13px;letter-spacing:-1px;line-height:19px}
+.sticky_assist .help .footer_assist .btns {padding:8px 0;font-size:0;text-align:center}
+.sticky_assist .help .footer_assist .btns .sriBtnS {margin:0 4px;padding:0;width:125px;letter-spacing:-0.5px}
+.sticky_assist .help .footer_assist .btns .sriBtnS.bg_before:before {display:inline-block;margin:7px 8px 0 0;width:16px;height:16px;vertical-align:top;background-position:-100px -50px}
+.sticky_assist .help .footer_assist .btns+.copy {padding-left:24px;text-indent:-24px}
+/* 채팅UI */
+.sticky_assist .spr_chat:before,
+.sticky_assist .spr_chat:after {background:url(//www.saraminimage.co.kr/sri/common/spr/spr_sticky_chat.png) no-repeat}
+.sticky_assist .chat_message {width:272px}
+.chat_message .message {padding:0 0 8px}
+.chat_message .message:after {display:table;clear:both;content:"";table-layout:fixed}
+.chat_message .message .ready {visibility:hidden;-webkit-animation-play-state:paused;animation-play-state:paused}
+.chat_message .message .show {visibility:visible;-webkit-animation-play-state:running;animation-play-state:running;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:messageEffect;animation-name:messageEffect;-webkit-animation-duration:.6s;animation-duration:.6s}
+.chat_message .message .show:nth-child(2) {-webkit-animation-delay:.6s;animation-delay:.6s}
+.chat_message .message .show:nth-child(3) {-webkit-animation-delay:1.2s;animation-delay:1.2s}
+.chat_message .message .show:nth-child(4) {-webkit-animation-delay:1.8s;animation-delay:1.8s}
+.chat_message .message .wrap_menu {padding-top:2px}
+.chat_message .message .wrap_menu .btn_menu {display:inline-block;margin:6px 2px 0 0;padding:8px 16px;height:40px;border:1px solid #dedede;border-radius:20px;box-sizing:border-box;color:#888;font-size:14px;letter-spacing:-1px;vertical-align:top;background:#fff}
+.chat_message .message .wrap_menu .btn_menu:hover {border-color:#37457b;color:#37457b}
+.chat_message .message .speech_bubble {display:inline-block;position:relative;margin-top:8px;padding:10px 16px;min-width:40px;max-width:272px;min-height:40px;border-radius:8px;box-sizing:border-box;color:#222;font-size:14px;line-height:20px;letter-spacing:-1px;word-break:break-all;word-wrap:break-word}
+.chat_message .message .speech_bubble:first-child:before {position:absolute;top:0;width:0;height:0;border-style:solid;content:""}
+.chat_message ._setData+.message .speech_bubble:first-child,
+.chat_message .message:first-child .speech_bubble:first-child {margin-top:0}
+.chat_message .message.left .speech_bubble {background:#f8f8f8}
+.chat_message .message.left .speech_bubble:first-child {border-top-left-radius:0}
+.chat_message .message.left .speech_bubble:before {left:-10px;border-width:0 10px 10px 0;border-color:transparent #f8f8f8 transparent transparent}
+.chat_message .message.right .speech_bubble {float:right;color:#fff;background:#707582}
+.chat_message .message.right .speech_bubble:first-child {border-top-right-radius:0}
+.chat_message .message.right .speech_bubble:before {right:-10px;border-width:10px 10px 0 0;border-color:#707582 transparent transparent transparent}
+.chat_message .message.left+.message.left .speech_bubble:first-child,
+.chat_message .message.right+.message.right .speech_bubble:first-child {margin-top:0}
+.chat_message .wrap_choice {overflow:hidden;padding:12px 0 2px;width:240px}
+.chat_message .message>.wrap_choice {padding-top:0}
+.chat_message .btn_choice {display:block;overflow:hidden;position:relative;margin-bottom:4px;padding:7px 16px;max-width:240px;width:100%;min-width:52px;height:40px;border:1px solid #e3e3e3;border-radius:7px;box-sizing:border-box;color:#37457b;font-weight:bold;font-size:14px;line-height:24px;letter-spacing:-1px;text-align:left;background:#fff}
+.chat_message .btn_choice:hover {border-color:#37457b}
+.chat_message .speech_bubble .preline {white-space:pre-line;word-break:break-all;word-wrap:break-word}
+.chat_message .speech_bubble .category {width:186px}
+.chat_message .speech_bubble .category.hide {visibility:hidden;padding:0;min-height:0;max-height:0;opacity:0}
+.chat_message .speech_bubble .category.open {visibility:visible;padding-top:6px;max-height:500px;box-sizing:border-box;opacity:1;-webkit-transition:max-height .4s, opacity .6s;transition:max-height .4s, opacity .6s;transition-delay:0s, .3s}
+.chat_message .speech_bubble .wrap_desc {margin:8px 0 6px;padding:12px 16px;width:240px;border-radius:6px;box-sizing:border-box;background:#fff}
+.chat_message .speech_bubble .wrap_desc dl {font-size:13px;line-height:20px;letter-spacing:-1px}
+.chat_message .speech_bubble .wrap_desc dl>dt {display:inline-block;padding-right:8px;color:#b0b0b0}
+.chat_message .speech_bubble .wrap_desc dl>dd {display:inline;color:#444;word-break:break-word}
+.chat_message .speech_bubble .wrap_desc.privacy {margin-top:16px}
+.chat_message .speech_bubble .wrap_desc.privacy dl>dd {display:inline-block}
+.chat_message .speech_bubble .wrap_desc.item dl>dt {padding-bottom:6px;box-sizing:border-box;color:#000;font-size:14px}
+.chat_message .speech_bubble .wrap_desc.item dl>dd {display:block;color:#949494;font-size:12px;line-height:16px}
+.chat_message .speech_bubble .wrap_desc+.wrap_choice {padding-top:2px}
+.chat_message .speech_bubble .btn_back {position:absolute;bottom:7px;right:-53px;color:#666;font-size:12px;letter-spacing:-1px}
+.chat_message .speech_bubble .btn_back:before {display:block;margin:0 auto 5px;width:28px;height:28px;background-position:-60px 0;content:""}
+.chat_message .speech_bubble .btn_back:hover:before {background-position:-60px -30px}
+.chat_message .speech_bubble .error:before {display:inline-block;margin-right:4px;width:20px;height:20px;vertical-align:top;background-position:0 -40px;content:""}
+.chat_message .message>.attach_file {padding:8px 0 0}
+.chat_message .attach_file .btn_choice {display:inline-block;margin:0 2px 0 0;width:auto;border-radius:20px;text-align:center;vertical-align:top;cursor:pointer}
+.chat_message .attach_file .btn_choice:hover {border-color:#37457b}
+.chat_message .attach_file .file_btn {display:inline-block;overflow:hidden;position:relative;margin-right:2px;vertical-align:top}
+.chat_message .attach_file .file_btn>input {clip:rect(1px, 1px, 1px, 1px);position:absolute;width:1px;height:1px}
+.chat_message .attach_file .file_btn .btn_choice:before {display:inline-block;margin:4px 4px 0 0;width:16px;height:16px;background-position:0 0;vertical-align:top;content:""}
+.chat_message .speech_bubble .txt_file {position:relative;padding-left:20px}
+.chat_message .speech_bubble .txt_file:before {position:absolute;top:3px;left:0;width:16px;height:16px;background-position:-20px 0;content:""}
+.chat_message .speech_bubble .txt_file .filename {display:inline-block;overflow:hidden;padding-right:2px;max-width:134px;box-sizing:border-box;font-size:13px;letter-spacing:-.5px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;vertical-align:top}
+.chat_message .speech_bubble .txt_file .btn_delete {margin:2px 0 0 2px;content:""}
+.chat_message .speech_bubble .txt_file .btn_delete:before {display:inline-block;width:17px;height:17px;vertical-align:top;background-position:-40px 0;content:""}
+.chat_message .speech_bubble .txt_file+.wrap_choice {width:173px}
+.chat_message .speech_bubble .list_assist {margin:12px 0 6px;min-height:auto;border-bottom:0}
+.chat_message .speech_bubble .list_assist ul {padding:4px 0;width:100%;border-radius:8px;background:#fff}
+.chat_message .speech_bubble .list_assist dt {margin-bottom:3px}
+.chat_message .speech_bubble .list_assist .link {padding:8px 16px 10px}
+.chat_message .speech_bubble .list_assist .category {width:100%}
+.chat_message .speech_bubble .list_assist .status+.category {width:138px}
+.chat_message .speech_bubble .list_assist+.wrap_choice {padding-top:2px}
+.chat_message .speech_bubble .list_assist .link:hover dt {text-decoration:underline}
+.chat_message .wrap_coupon {overflow:hidden;position:relative;margin-top:8px;border-radius:8px}
+.chat_message .wrap_coupon:before {position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid #dedede;border-radius:8px;content:""}
+.chat_message .wrap_coupon .coupon {overflow:hidden;position:relative;padding:28px;border-style:solid;border-color:#1fb7b9;border-width:2px 0 0;letter-spacing:-1px;text-align:center}
+.chat_message .wrap_coupon .coupon:after {position:absolute;top:50%;left:0;margin-top:-14px;width:272px;height:28px;background:url(//www.saraminimage.co.kr/sri/common/bg/bg_sticky_coupon.png) 0 50% no-repeat;content:""}
+.chat_message .wrap_coupon .coupon .tit {display:block;padding-bottom:8px;color:#000;font-size:18px;line-height:20px}
+.chat_message .wrap_coupon .coupon .txt {display:block;padding-top:4px;color:#949494;font-size:13px;line-height:16px}
+.chat_message .wrap_coupon .coupon .expiry_date {color:#16a7a9;letter-spacing:0}
+.chat_message .list_coupon .coupon {padding:16px 18px;border-width:0 0 0 2px;text-align:left}
+.chat_message .list_coupon .coupon:before {position:absolute;left:16px;right:16px;bottom:0;height:1px;background:#dedede;content:""}
+.chat_message .list_coupon .coupon:after {content:none}
+.chat_message .list_coupon .coupon .tit {padding:0;font-weight:normal;font-size:13px;line-height:16px}
+.chat_message .list_applicant {margin:16px 0 6px}
+.chat_message .list_applicant .title {padding:12px 16px;border-bottom:1px solid #eee;border-radius:8px 8px 0 0;color:#000;font-size:14px;background:#fff}
+.chat_message .list_applicant ul {border-radius:0 0 8px 8px;background:#fff}
+.chat_message .list_applicant li {border-top:1px solid #f8f8f8}
+.chat_message .list_applicant li:first-child {border-top:0}
+.chat_message .list_applicant .link {display:block;padding:12px 16px}
+.chat_message .list_applicant .link .wrap_thumb {float:left;position:relative;width:40px;height:40px}
+.chat_message .list_applicant .link .thumb {display:block;overflow:hidden;position:static;border-radius:50%;width:40px;height:40px}
+.chat_message .list_applicant .link .thumb>img {width:100%;vertical-align:top}
+.chat_message .list_applicant .link .badge {position:absolute;left:0;bottom:-8px;width:100%;height:18px;border-radius:11px;color: #fff;font-size:12px;letter-spacing:-1px;line-height:18px;text-align:center;background:#444}
+.chat_message .list_applicant .link .info {display:block;overflow:hidden;padding-left:16px;height:40px}
+.chat_message .list_applicant .link .info>span {overflow:hidden;font-size:13px;letter-spacing:-1px;text-overflow:ellipsis;white-space:nowrap}
+.chat_message .list_applicant .link .info .name {overflow:hidden;float:left;padding-right:8px;max-width:38%;box-sizing:border-box;color:#222;font-weight:normal;font-size:13px;vertical-align:top;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.chat_message .list_applicant .link .info .career {float:left;width:62%;color:#222;font-weight:bold}
+.chat_message .list_applicant .link .info .desc {display:inline-block;position:relative;padding-right:24px;max-width:100%;box-sizing:border-box;color:#888;vertical-align:top}
+.chat_message .list_applicant .link .info .desc>img {position:absolute;top:1px;right:0}
+.chat_message .list_applicant .link:hover .info .name,
+.chat_message .list_applicant .link:hover .info .career {text-decoration:underline}
+.chat_message .list_applicant+.wrap_choice {padding-top:2px}
+.chat_message .wrap_report {margin:16px 0 8px}
+.chat_message .wrap_report .data {overflow:hidden;padding-bottom:16px;font-size:13px;line-height:20px}
+.chat_message .wrap_report .data>dt {float:left;width:56px;color:#888}
+.chat_message .wrap_report .data>dd {overflow:hidden;color:#444;letter-spacing:-.5px}
+.chat_message .wrap_report .tbl {width:100%;border-radius:8px;border-spacing:0;border-collapse:collapse;color:#000;font-size:13px;line-height:16px;text-align:center;table-layout:fixed;word-break:break-all;background:#fff}
+.chat_message .wrap_report .tbl th {height:32px;color:#949494;text-align:center}
+.chat_message .wrap_report .tbl td {padding:4px;height:32px;border-top:1px solid #eee;box-sizing:border-box;letter-spacing:0}
+.chat_message .wrap_report .tbl tbody th {padding-left:5px;border-top:1px solid #eee}
+.chat_message .wrap_report .tbl thead th:last-child,
+.chat_message .wrap_report .tbl tbody td:last-child {padding-right:16px}
+.chat_message .wrap_report+.wrap_choice {padding-top:2px}
+.sticky_assist.company .chat_message .message.left .speech_bubble {color:#000}
+.sticky_assist.company .chat_message .message.right .speech_bubble {font-weight:bold;background:#1fb7b9}
+.sticky_assist.company .chat_message .message.right .speech_bubble:before {border-top-color:#1fb7b9}
+.sticky_assist.company .chat_message .btn_choice {border-color:#a9e7f7;color:#00afb4}
+.sticky_assist.company .chat_message .spr_chat.btn_choice:after {position:absolute;top:14px;right:18px;width:7px;height:12px;background-position:-20px -40px;opacity:.5;content:""}
+.sticky_assist.company .chat_message .btn_choice:hover {border-color:#00afb4;color:#078f90}
+.sticky_assist.company .chat_message .btn_choice:hover:after {opacity:1}
+.sticky_assist.company .chat_message .wrap_menu .btn_menu {color:#222}
+.sticky_assist.company .chat_message .wrap_menu .btn_menu:hover {border-color:#16a7a9;color:#16a7a9}
+
+@-webkit-keyframes messageEffect {
+    0% {opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}
+    100% {opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+}
+@keyframes messageEffect {
+    0% {opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}
+    100% {opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+}
+/* 검색창 */
+.help .search_assist {position:absolute;bottom:-62px;left:0;width:100%;min-height:62px;box-sizing:border-box;-webkit-transition:all .5s;transition:all .5s}
+.search_assist .wrap_more {position:static;float:none;border:0}
+.search_assist .wrap_more:before {position:absolute;top:0;left:16px;right:16px;padding:12px 12px 12px 48px;border-radius:24px;box-sizing:border-box;color:#949494;font-size:14px;line-height:24px;letter-spacing:-1px;background:#f6f7f8;content:"다른 궁금하신 점이 있으신가요?"}
+.search_assist .wrap_more .btn_more {position:absolute;top:8px;left:24px;width:32px;height:32px;border-radius:50%;background:#ff6d6a;-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition:transform .5s ease-in-out;transition:transform .5s ease-in-out}
+.search_assist .wrap_more .btn_more:before,
+.search_assist .wrap_more .btn_more:after {position:absolute;left:50%;margin-left:-6px;width:12px;height:1px;background:#fff;content:""}
+.search_assist .wrap_more .btn_more:before {top:11px}
+.search_assist .wrap_more .btn_more:after {top:19px}
+.search_assist .wrap_more .btn_more .ico:before,
+.search_assist .wrap_more .btn_more .ico:after {position:absolute;left:50%;margin-left:-6px;width:12px;height:1px;background:#fff;-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out;content:""}
+.search_assist .wrap_more .btn_more .ico:before,
+.search_assist .wrap_more .btn_more .ico:after {top:15px}
+.search_assist .wrap_more .list_menu {visibility:hidden;height:0;border-radius:0 0 6px 6px;max-height:0;background:#fff}
+.search_assist .wrap_more .list_menu .btn_menu {display:inline-block;margin-top:4px;padding:0 13px;height:36px;border:1px solid #dedede;border-radius:18px;box-sizing:border-box;color:#222;font-size:13px;letter-spacing:-1px;vertical-align:top;background:#fff}
+.search_assist .wrap_more .list_menu .btn_menu:hover {border-color:#37457b;color:#37457b}
+.search_assist .wrap_form {display:none;padding:12px 50px 12px 56px;border-top:1px solid #f2f2f2;border-radius:0 0 6px 6px;background:#fff}
+.search_assist .wrap_form .input_search {overflow:hidden;padding:7px 10px 3px;width:100%;height:37px;max-height:83px;border:0;box-sizing:border-box;color:#444;font-family:"Malgun Gothic",dotum,gulim,sans-serif;font-size:14px;line-height:24px;letter-spacing:-1px;vertical-align:top;resize:none}
+.search_assist .wrap_form .input_search::placeholder {color:#999;opacity:1}
+.search_assist .wrap_form .input_search:-ms-input-placeholder {color:#999;letter-spacing:-1.5px;opacity:1}
+.search_assist .wrap_form .input_search.resize {overflow-y:auto;height:83px}
+.search_assist .wrap_form .input_search::-webkit-scrollbar {width:6px;height:6px}
+.search_assist .wrap_form .input_search::-webkit-scrollbar-track {background:#f1f1f1}
+.search_assist .wrap_form .input_search::-webkit-scrollbar-thumb {background:#cecece}
+.search_assist .wrap_form .btn_search {position:absolute;bottom:8px;right:8px;padding:16px 16px 16px 10px}
+.search_assist .wrap_form .btn_search:before {display:block;width:16px;height:16px;background-position:0 -20px;content:""}
+.search_assist .wrap_form .input_search.on+.btn_search:before {background-position:-20px -20px}
+.search_assist .suggest {display:none;overflow-y:auto;position:absolute;bottom:62px;left:0;right:0;max-height:240px;border-top:1px solid #e7e7e7}
+.search_assist .suggest::-webkit-scrollbar {width:6px;height:6px}
+.search_assist .suggest::-webkit-scrollbar-track {background:#f1f1f1}
+.search_assist .suggest::-webkit-scrollbar-thumb {background:#cecece}
+.search_assist .suggest.show {display:block}
+.search_assist .suggest.reposition {bottom:108px}
+.search_assist .suggest button {display:block;overflow:hidden;padding:15px 40px 15px 58px;width:100%;min-height:47px;box-sizing:border-box;color:#37457b;font-size:14px;line-height:17px;text-align:left;word-break:break-all;background:#fcfcfc}
+.search_assist .suggest button span {color:#b6b6b6;letter-spacing:-1px}
+.search_assist .suggest button:hover,
+.search_assist .suggest button.on {font-weight:bold;letter-spacing:-1px;background:#efefef}
+.search_assist .suggest button:hover span,
+.search_assist .suggest button.on span {color:#444;letter-spacing:-1.5px}
+.search_assist.show {bottom:0;max-height:62px}
+.search_assist.input {max-height:200px}
+.search_assist.input .wrap_more {height:0}
+.search_assist.input .wrap_more:before {display:none}
+.search_assist.input .wrap_more .btn_more {top:auto;bottom:14px}
+.search_assist.input .wrap_form {display:block}
+.search_assist.open {max-height:200px}
+.search_assist.open .wrap_more {padding-top:48px;box-sizing:border-box}
+.search_assist.open .wrap_more:before {top:0;left:0;right:0;border-radius:24px 24px 0 0;padding-left:64px;color:#444;font-weight:bold;content:"더 궁금하신 점을 선택해주세요!"}
+.search_assist.open .wrap_more .btn_more {top:8px;bottom:auto}
+.search_assist.open .wrap_more .btn_more:before,
+.search_assist.open .wrap_more .btn_more:after {display:none}
+.search_assist.open .wrap_more .btn_more .ico:before {-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+.search_assist.open .wrap_more .btn_more .ico:after {-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}
+.search_assist.open .wrap_more .list_menu {visibility:visible;padding:12px 0 16px 24px;height:auto;max-height:200px;box-sizing:border-box;-webkit-transition:max-height .6s;transition:max-height .6s}
+.search_assist.input.open .wrap_more {position:static;height:auto}
+.search_assist.input.open .wrap_more:before {display:block}
+.search_assist.input.open .wrap_form {display:none}
+.sticky_assist.company .search_assist .list_menu .btn_menu:hover {border-color:#16a7a9;color:#16a7a9}
+/* WMG-26073 수정 끝 */
+
+/* 커뮤니티 WMG-27076 수정 */
+.sticky_assist .box_company_review {padding:24px 24px 0}
+.sticky_assist .box_company_review .thank_you_card {display:table;margin:0 auto;padding:0 10px;width:272px;height:127px;box-sizing:border-box;text-align:center;background:url(//www.saraminimage.co.kr/sri/common/bg/bg_card_sticky.png) no-repeat}
+.sticky_assist .box_company_review .thank_you_card .txt {display:table-cell;color:#fff;font-size:14px;line-height:22px;letter-spacing:-.1px;vertical-align:middle}
+.sticky_assist .box_company_review .keywords {padding-top:8px}
+.sticky_assist .box_company_review .keywords>span {display:inline-block;margin:8px 4px 0 0;padding:0 11px;height:24px;border-radius:12px;color:#949494;font-size:13px;line-height:24px;letter-spacing:-.5px;vertical-align:top;background:#f2f2f2}
+.sticky_assist .box_company_review .to {position:relative;margin-bottom:15px;padding-left:24px;width:100%;box-sizing:border-box;color:#dc3434;font-size:13px;letter-spacing:-.5px;line-height:16px}
+.sticky_assist .box_company_review .to:before {position:absolute;top:2px;left:0;width:24px;height:16px;background:url(//www.saraminimage.co.kr/sri/common/bg/txt_to_sticky.png) 50% 0 no-repeat;content:""}
+.sticky_assist.company .box_company_review .to {color:#00a9b2}
+.sticky_assist.company .box_company_review .to:before {background-position:50% -20px}
+.sticky_assist .box_company_review .from {padding-top:10px;color:#888;font-size:13px;line-height:20px;letter-spacing:-1px;text-align:right}
+.sticky_assist .box_company_review .from:before {content:"FROM. "}
+.sticky_assist .box_company_review .write {min-height:280px}
+.sticky_assist .box_company_review .write .to {margin-top:25px;padding-left:24px;color:#666}
+.sticky_assist .box_company_review .write .to:before {background-position:50% -40px}
+.sticky_assist .box_company_review .notice_txt {letter-spacing:-1px}
+.sticky_assist .box_company_review .notice_txt:before {left:5px;content:"*"}
+.sticky_assist .box_company_review.question {min-height:389px}
+.sticky_assist .box_company_review .answer {padding:24px 0 23px}
+.sticky_assist .box_company_review .answer .box {height:124px}
+.sticky_assist .box_company_review .box {overflow-y:auto;padding:12px 12px 16px;width:100%;height:184px;box-sizing:border-box;background:#f4f5f6}
+.sticky_assist .box_company_review .box .tit {margin-bottom:8px;color:#333;font-size:14px;font-weight:bold;letter-spacing:-1px;line-height:20px}
+.sticky_assist .box_company_review .box .txt {color:#333;font-size:14px;letter-spacing:-1px;line-height:21px}
+.sticky_assist .box_company_review .box .txt.txt_title {font-size:16px}
+/* WMG-27076 수정 끝 */
+
+/* 이력서 비공개 전환 설문 */
+.sticky_assist .inner_view.type2 {padding-top:18px;text-align:center}
+.sticky_assist .inner_view.type2 .last_img_mark {margin:32px 0 40px}
+.sticky_assist .inner_view.type2 .question {margin-bottom:24px;color:#444;font-size:15px;font-weight:bold;letter-spacing:-1px;line-height:22px;text-align:left}
+.sticky_assist .inner_view.type2 .question .txt {display:block;margin-bottom:10px;font-size:14px;font-weight:normal;line-height:21px}
+.sticky_assist .option_list {border-radius:5px}
+.sticky_assist .option_list li {position:relative;margin-top:-1px}
+.sticky_assist .option_list li:last-child {border-radius:0 0 5px 5px}
+.sticky_assist .option_list li .choice_check {width:100%;height:auto;text-align:left}
+.sticky_assist .option_list li .choice_check .lbl {display:block;padding:15px 10px 17px 42px;height:auto;border-right:1px solid #eaeaea;border-left:1px solid #eaeaea;outline:none;color:#333;font-size:14px;letter-spacing:-1px;line-height:normal;background:url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_checkbox.png) 10px center no-repeat;box-shadow:none;cursor:pointer}
+.sticky_assist .option_list li .choice_check .lbl:before {display:inline-block;float:none;position:absolute;top:0;right:0;left:0;margin:0;width:auto;height:1px;border-top:1px solid #eaeaea;background:none;content:""}
+.sticky_assist .option_list li .choice_check .lbl:after {display:inline-block;position:absolute;right:0;bottom:0;left:0;height:1px;border-bottom:1px solid #eaeaea;content:""}
+.sticky_assist .option_list li .choice_check input:not([type=text]):checked+.lbl {border-right-color:#dc3434; border-left-color:#dc3434;background:#fff7f8 url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_checkbox_checked.png) 10px center no-repeat}
+.sticky_assist .option_list li .choice_check input:not([type=text]):checked+.lbl:before {z-index:10;border-top-color:#dc3434}
+.sticky_assist .option_list li .choice_check input:not([type=text]):checked+.lbl:after {z-index:11;border-bottom-color:#dc3434}
+.sticky_assist .option_list li:first-child .choice_check .lbl {border-top:1px solid #eaeaea;border-radius:5px 5px 0 0}
+.sticky_assist .option_list li:first-child .choice_check .lbl:before {display:none}
+.sticky_assist .option_list li:first-child .choice_check input:not([type=text]):checked+.lbl {border-top-color:#dc3434}
+.sticky_assist .option_list li:last-child .choice_check .lbl {border-bottom:1px solid #eaeaea;border-radius:0 0 5px 5px}
+.sticky_assist .option_list li:last-child .choice_check .lbl:after {display:none}
+.sticky_assist .option_list li:last-child .choice_check input:not([type=text]):checked+.lbl {border-bottom-color:#dc3434}
+.sticky_assist .option_list li .choice_check .option_etc {margin:-5px 0 -6px 6px;padding-bottom:3px;width:180px;height:22px;border:none;border-bottom:1px solid #eaeaea;font-size:13px;letter-spacing:-1px;vertical-align:middle;background-color:transparent}
+.sticky_assist .option_list li .choice_check input:not([type=text]):checked+.lbl .option_etc {border-bottom:1px solid #ff6063}
+.sticky_assist .option_list li .choice_check.sriInpRdo .lbl {background:url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_radio.png) 10px center no-repeat}
+.sticky_assist .option_list li .choice_check.sriInpRdo input:not([type=text]):checked+.lbl {background:#fff3f3 url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_radio_selected.png) 10px center no-repeat}
+.sticky_assist .option_list span.sriInpRdo>input:focus+.lbl:before,
+.sticky_assist .option_list span.sriInpChk>input:focus+.lbl:before {outline:none}
+/* WMG-25046 */
+.sticky_assist .option_list li .sriInpRdo .lbl:before {float:left;margin:0 9px 0 0;vertical-align:top;background:url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_radio.png) 0 center no-repeat;content:""}
+.sticky_assist .option_list li .sriInpRdo input:not([type=text]):checked+.lbl:before {background:url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_radio_selected.png) 0 center no-repeat}
+/* // WMG-25046 */
+
+/* WMG-24964 */
+.sticky_assist .box_must_recommend {margin:24px 0 0}
+.sticky_assist .box_must_recommend .list_tag {position:relative;padding:24px 23px 10px}
+.sticky_assist .box_must_recommend .list_tag:before {position:absolute;top:0;left:0;z-index:-1;width:100%;height:119px;background:#f7f7f7;content:""}
+.sticky_assist .box_must_recommend .list_tag:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .box_must_recommend .list_tag li {float:left;margin:0 4px 6px 0;padding:1px 6px 3px;border-radius:14px;color:#4876ef;font-size:12px;letter-spacing:-1px;line-height:18px;background:#fff}
+.sticky_assist .box_must_recommend .sample_image {display:block;margin:0 auto;width:272px}
+
+/* */
+.sticky_assist .box_resume_wakeup {padding:24px 24px 0;height:233px}
+.sticky_assist .box_resume_wakeup .box {overflow-y:auto;padding:12px 12px 16px;width:100%;box-sizing:border-box;background:#f4f5f6}
+.sticky_assist .box_resume_wakeup .box .tit {margin-bottom:8px;color:#333;font-size:14px;font-weight:bold;letter-spacing:-1px;line-height:20px}
+.sticky_assist .box_resume_wakeup .box .txt {color:#333;font-size:14px;letter-spacing:-1px;line-height:21px}
+.sticky_assist .box_resume_wakeup .box .txt.txt_title {font-size:16px}
+
+/* WMG-25674 기획 조건에 따라 수정 가능 */
+.sri_btn_md {overflow:hidden;margin:0;padding:0;width:160px;height:32px;border:0;box-sizing:border-box;text-align:center;vertical-align:top;cursor:pointer}
+.sri_btn_md span {display:inline-block;width:158px;height:30px;border:1px solid #dce2ef;color:#8a92a6;font-family:"Malgun Gothic",sans-serif !important;font-size:14px !important;letter-spacing:-1px;line-height:28px;background:#fff}
+.sri_btn_md span.sri_btn_immediately {position:relative;border:1px solid #ff5656;color:#dc3434}
+
+/* animation */
+@keyframes sticky_bounce {0%,
+100% {transform:translateY(0)}
+    25%,
+    80% {transform:translateY(2px)}
+    50% {transform:translateY(10px)}}
+
+@keyframes sticky_expand_second {0% {transform:translateX(72px)}
+    70% {transform:translateX(-20px)}
+    90% {transform:translateX(-10px)}
+    95% {transform:translateX(-2px)}
+    100% {transform:translateX(0)}}
+
+@keyframes sticky_expand_third {0% {transform:translateX(144px)}
+    70% {transform:translateX(-25px)}
+    90% {transform:translateX(-10px)}
+    95% {transform:translateX(-2px)}
+    100% {transform:translateX(0)}}
+/* WMG-25789 */
+@keyframes sticky_expand_fourth {0% {transform:translateX(216px)}
+    70% {transform:translateX(-30px)}
+    90% {transform:translateX(-10px)}
+    95% {transform:translateX(-2px)}
+    100% {transform:translateX(0)}}
+/* // WMG-25789 */
+
+/* WMG-25550 */
+.sticky_assist .job_event .step {position:relative}
+.sticky_assist .job_event .step:after {display:block;position:absolute;top:0;left:20px;width:1px;height:100%;background-color:#ddd;content:""}
+.sticky_assist .job_event .step li {display:table;position:relative;margin-top:40px;padding-left:52px;min-height:40px;box-sizing:border-box;font-size:0}
+.sticky_assist .job_event .step li:first-child {margin-top:0}
+.sticky_assist .job_event .step li .inner {display:table-cell;vertical-align:middle}
+.sticky_assist .job_event .step li .title {display:block;font-size:15px;line-height:20px}
+.sticky_assist .job_event .step li .title em {font-weight:bold;letter-spacing:-0.5px}
+.sticky_assist .job_event .step li .condition {display:block;position:absolute;top:0;left:0;z-index:1;width:40px;height:40px;border-radius:50%;box-sizing:border-box;font-size:12px;letter-spacing:-1px;line-height:40px;text-align:center}
+.sticky_assist .job_event .step li .condition.type1 {border:1px solid #888;color:#666;background-color:#fff}
+.sticky_assist .job_event .step li .condition.type2 {border:1px solid #ff5656;color:#dc3434;background-color:#fff}
+.sticky_assist .job_event .step li .condition.type3 {color:#fff;background-color:#dc3434}
+.sticky_assist .job_event .step li .desc {margin-top:2px;color:#aaa;font-size:12px;letter-spacing:-1px;line-height:16px}
+.sticky_assist .job_event .step li .link {display:inline-block;margin-top:2px;color:#dc3434;font-size:12px;letter-spacing:-1px;line-height:16px}
+.sticky_assist .job_event .step li .link:hover {text-decoration:underline}
+.sticky_assist .job_event .step li .link:after {display:inline-block;position:relative;top:1px;margin-left:6px;width:5px;height:5px;border-top:1px solid #ff6d6a;border-right:1px solid #ff6d6a;-webkit-transform:translate(-50%, -50%) rotate(45deg);-ms-transform:translate(-50%, -50%) rotate(45deg);transform:translate(-50%, -50%) rotate(45deg);content:""}
+.sticky_assist .job_event .box_tit {padding:30px 0 0;color:#333;font-size:15px;line-height:21px}
+.sticky_assist .job_event .box_tit .txt {margin-top:16px}
+.sticky_assist .job_event .img_gift {display:block;margin:13px auto 0}
+
+/* WMG-25443 to do list */
+.sticky_assist .section_view.area_todolist {height:700px}
+.sticky_assist .area_todolist .area_btn {margin-top:50px}
+.area_todolist .inner_view .box_notice {margin-top:0;padding:11px 10px 10px 12px}
+.area_todolist .inner_view .notice_txt {margin-top:16px}
+.inner_view .todo_list li {margin-top:0;padding-left:0;letter-spacing:0}
+.inner_view .todo_list li .link {color:#222;font-size:14px;font-weight:bold;letter-spacing:-1.5px;line-height:32px;vertical-align:middle}
+.inner_view .todo_list li.todo_finish .link {color:#949494;font-weight:normal;text-decoration:line-through}
+.inner_view .todo_list li.todo_finish:after {display:none}
+.inner_view .todo_list li:before {display:none}
+.inner_view .todo_list li:after {display:inline-block;margin-left:3px;width:8px;height:18px;font-size:14px;font-weight:bold;line-height:16px;vertical-align:middle;content:">"}
+/* WMG-25046 */
+/* 직무 인재 정보 */
+.sticky_assist .position_info {text-align:center}
+.sticky_assist .position_info .type {display:inline-block;margin:24px auto 0;padding:7px 40px;max-width:272px;border-radius:16px;box-sizing:border-box;color:#444;font-size:14px;letter-spacing:-1px;text-align:center;background-color:#f8f8f8}
+.sticky_assist .position_info .thumb {display:block;overflow:hidden;margin:20px auto 0;width:72px;height:72px;border:1px solid #e6e6e6;border-radius:50%;box-sizing:border-box}
+.sticky_assist .position_info .thumb img {width:100%}
+.sticky_assist .position_talent_info {position:relative;margin-top:20px;padding:10px 24px 0;box-sizing:border-box}
+.sticky_assist .position_talent_info:before {display:block;position:absolute;top:0;right:24px;left:24px;height:1px;background-color:#e6e6e6;content:""}
+.sticky_assist .position_talent_info:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .position_talent_info dt,
+.sticky_assist .position_talent_info dd {float:left;margin-top:10px;font-size:14px;letter-spacing:-1px;line-height:20px;word-wrap:break-word;word-break:break-all}
+.sticky_assist .position_talent_info dt {width:60px;color:#666}
+.sticky_assist .position_talent_info dd {width:calc(100% - 60px);color:#444}
+.sticky_assist .wrap_area_btn .area_btn:first-child {padding-bottom:0}
+.sticky_assist .wrap_area_btn .area_btn:nth-child(n+2) {padding-top:10px}
+.sticky_assist .position_no_data:after {display:block;margin:50px 0 20px;height:172px;background:url(//www.saraminimage.co.kr/sri/vix/bg/bg_position_talent.png) no-repeat 73px 0;content:""}
+.sticky_assist .position_no_data .box_tit .txt {margin:0 0 16px}
+
+/* 면접, 입사제의 */
+.sticky_assist .proposal_info .type {display:block;font-size:13px}
+.sticky_assist .proposal_info .box_notice {overflow-y:auto;height:145px;box-sizing:border-box}
+.sticky_assist .proposal_info .detail_link {display:block;margin-top:10px;color:#666;font-size:13px;letter-spacing:-1px;line-height:21px;text-align:right;text-decoration:underline}
+.sticky_assist .proposal_info .choice_title {display:block;color:#333;font-size:15px;font-weight:bold}
+.sticky_assist .proposal_info .choice_title.border {margin-top:15px;padding-top:15px;border-top:1px solid #ededed}
+.sticky_assist .proposal_info .choice_warning {margin:5px 0 -5px;color:#f00;font-size:12px;letter-spacing:-1px}
+.sticky_assist .proposal_info .option_list {margin-top:15px;border-radius:0}
+.sticky_assist .proposal_info .option_list.border {padding:15px 0;border-top:1px solid #ededed;border-bottom:1px solid #ededed}
+.sticky_assist .proposal_info .option_list li {margin-top:0}
+.sticky_assist .proposal_info .option_list li:nth-child(n+2) {margin-top:14px}
+.sticky_assist .proposal_info .option_list li .lbl {padding:0 0 0 31px;min-height:22px;background-repeat:no-repeat;background-position:0 0;cursor:pointer}
+.sticky_assist .proposal_info .option_list li .lbl:before,
+.sticky_assist .proposal_info .option_list li .lbl:after {display:none}
+.sticky_assist .proposal_info .option_list li input[type=radio]+.lbl {background-image:url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_radio.png)}
+.sticky_assist .proposal_info .option_list li input[type=radio]:checked+.lbl {background-image:url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_radio_selected.png)}
+.sticky_assist .proposal_info .option_list li input[type=checkbox]+.lbl {background-image:url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_checkbox.png)}
+.sticky_assist .proposal_info .option_list li input[type=checkbox]:checked+.lbl {background-image:url(//www.saraminimage.co.kr/sri/person/resume/ico_sticky_checkbox_checked.png)}
+.sticky_assist .proposal_info .option_list .detail {margin-top:15px}
+.sticky_assist .proposal_info .option_list .detail .box {padding:15px;background-color:#fbfbfb}
+.sticky_assist .proposal_info .option_list .detail .box .choice_title {color:#222;font-size:14px;letter-spacing:-1px}
+.sticky_assist .proposal_info .option_list .detail>.option_list {padding:0 15px}
+.sticky_assist .proposal_info .resume_choice {margin-top:15px;padding-top:15px;border-top:1px solid #ededed}
+.sticky_assist .proposal_info .resume_choice .desc {margin-bottom:15px;color:#222;font-size:14px;letter-spacing:-1px}
+/* // WMG-25046 */
+
+/* 통합기업정보 이용 유도 */
+.sticky_assist .induction_info .company_logo {margin:16px 0;text-align:center}
+.sticky_assist .induction_info .company_logo img {height:40px;vertical-align:top}
+.sticky_assist .induction_info .txt {margin-bottom:23px;color:#444;font-size:17px;letter-spacing:-1px;line-height:24px}
+.sticky_assist .choice_box .item {position:relative;margin-top:10px}
+.sticky_assist .choice_box .item:first-child {margin-top:0}
+.sticky_assist .choice_box .item .ico_badge {position:absolute;top:-9px;right:-7px;z-index:1;width:76px;height:28px;box-sizing:border-box;color:#fff;font-size:11px;letter-spacing:-1px;text-align:center;background:url(//www.saraminimage.co.kr/sri/company/ico/ico_update_recommend_200714.png) no-repeat 0 0;-webkit-padding-before:1px}
+.sticky_assist .choice_box .item .choice_btn>.lbl {display:inline-block;width:100%;border:1px solid #ddd;border-radius:5px;box-sizing:border-box;vertical-align:top;cursor:pointer}
+.sticky_assist .choice_box .item .choice_btn>.lbl:before {position:absolute;top:16px;right:16px;background:url(//www.saraminimage.co.kr/sri/pattern/spr_input_all.png) no-repeat 0 0;content:""}
+.sticky_assist .choice_box .item .choice_btn.input_rdo>.lbl:before {width:22px;height:22px;background-position-x:-40px}
+.sticky_assist .choice_box .item .choice_btn.input_rdo>input:checked+.lbl:before {background-position-y:-40px}
+.sticky_assist .choice_box .item .choice_btn.input_chk>.lbl:before {width:20px;height:20px;background-position-x:-160px}
+.sticky_assist .choice_box .item .choice_btn.input_chk>input:checked+.lbl:before {background-position-y:-40px}
+.sticky_assist .choice_box .item .choice_btn>input:not([type=text]):checked+.lbl {border:1px solid #2365f2}
+.sticky_assist .choice_box .item .choice_btn>input {position:absolute;top:0;width:1px;height:1px;outline:none;opacity:0;pointer-events:none}
+.sticky_assist .choice_box .item .choice_btn>.lbl:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .choice_box .item .choice_btn>.lbl.hide {font-size:0}
+.sticky_assist .choice_box .item.type1 .choice_btn>.lbl {height:168px}
+.sticky_assist .choice_box .item.type2 .choice_btn>.lbl {height:144px}
+.sticky_assist .choice_box .item .company_info {position:absolute;top:16px;left:16px;z-index:-1;width:240px}
+.sticky_assist .choice_box .item .company_info .name {display:block;overflow:hidden;max-width:85%;color:#222;font-size:13px;letter-spacing:-1px;line-height:22px;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .choice_box .item .company_info ul li {overflow:hidden;color:#444;font-size:13px;letter-spacing:-1px;line-height:22px;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .choice_box .item .update_time {position:absolute;right:18px;bottom:16px;z-index:-1;color:#888;font-size:12px;letter-spacing:-0.5px;line-height:22px}
+
+/* WMG-26738 */
+.sticky_assist .choose_list li {position:relative;margin-top:10px}
+.sticky_assist .choose_list li:first-child {margin-top:0}
+.sticky_assist .choose_list li .link {display:block;padding:16px;border:1px solid #ddd;border-radius:5px;box-sizing:border-box}
+.sticky_assist .choose_list li .link.on {border:1px solid #2365f2}
+.sticky_assist .choose_list li .name {display:block;overflow:hidden;margin-bottom:6px;color:#222;font-size:14px;letter-spacing:-1px;line-height:22px;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .choose_list li .title {display:block;display:-webkit-box;overflow:hidden;margin-bottom:8px;max-height:40px;color:#444;font-size:14px;letter-spacing:-1px;line-height:20px;text-overflow:ellipsis;word-wrap:break-word;word-break:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.sticky_assist .choose_list li .name.type2,
+.sticky_assist .choose_list li .title.type2 {width:210px}
+.sticky_assist .choose_list li .add {display:block;overflow:hidden;color:#666;font-size:13px;letter-spacing:-1px;line-height:22px;text-overflow:ellipsis;white-space:nowrap}
+.sticky_assist .choose_list li .choice_btn {position:absolute;top:16px;right:16px}
+.sticky_assist .choose_list li .choice_btn>.lbl {cursor:pointer}
+.sticky_assist .choose_list li .choice_btn>.lbl:before {float:left;vertical-align:top;background:url(//www.saraminimage.co.kr/sri/pattern/spr_input_all.png) no-repeat 0 0;content:""}
+.sticky_assist .choose_list li .choice_btn.input_rdo>.lbl:before {width:22px;height:22px;background-position-x:-40px}
+.sticky_assist .choose_list li .choice_btn.input_rdo>input:checked+.lbl:before {background-position-y:-40px}
+.sticky_assist .choose_list li .choice_btn.input_chk>.lbl:before {width:20px;height:20px;background-position-x:-160px}
+.sticky_assist .choose_list li .choice_btn.input_chk>input:checked+.lbl:before {background-position-y:-40px}
+.sticky_assist .choose_list li .choice_btn>input {position:absolute;top:0;width:1px;height:1px;outline:none;opacity:0;pointer-events:none}
+.sticky_assist .choose_list li .choice_btn>.lbl:after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .choose_list li .choice_btn>.lbl.hide {font-size:0}
+/* // WMG-26738 */
+
+/* WMG-25998 지원시도 채용공고 */
+.sticky_assist .wrap_scroll.support {overflow-y:auto;height:574px;}
+.sticky_assist .wrap_scroll.support:only-of-type {overflow:visible;height:auto;}
+.sticky_assist .wrap_scroll.support .box_tit .point {display:inline}
+.sticky_assist .wrap_scroll.support+.area_btn {position:absolute;bottom:0;left:0;padding:20px 24px 24px;width:100%;height:94px;border-top:1px solid #ededed;box-sizing:border-box;}
+
+/* WMG-27420 */
+.sticky_assist .inner_view .inner_area_btn {padding:16px 0 24px}
+.sticky_assist .inner_view .inner_area_btn .sriBtnL:only-child {margin:0;width:100%}
+.sticky_assist .list_notice_txt {padding:24px 0;border-top:1px solid #ededed;color:#888;font-size:13px;letter-spacing:-0.5px;line-height:17px}
+.sticky_assist .list_notice_txt li {position:relative;padding-left:10px}
+.sticky_assist .list_notice_txt li:before {position:absolute;top:0;left:0;content:"\002A"}
+
+/* WMG-26828 */
+.sticky_assist .company_review .type {display:block;font-size:13px}
+.sticky_assist .company_review .option_list {margin-top:16px}
+.sticky_assist .company_review .sriInpTypo {margin-top:16px}
+.sticky_assist .company_review .box_gray {margin:12px 0 0 0;padding:10px 18px 12px 12px;height:40px;border-radius:2px;box-sizing:border-box;font-size:14px;letter-spacing:-1px;line-height:21px;background-color:#f4f5f6}
+.sticky_assist .company_review .wrap_grade {text-align:center}
+.sticky_assist .company_review .wrap_star {display:inline-block;margin:32px auto 24px auto}
+.sticky_assist .company_review .wrap_star::after {display:table;clear:both;content:"";table-layout:fixed}
+.sticky_assist .company_review .star {float:left;margin-left:10px;width:34px;height:34px}
+.sticky_assist .company_review .star:first-child {margin-left:0}
+.sticky_assist .company_review .star .bg_star .change_color {fill:none}
+.sticky_assist .company_review .star.on .bg_star .change_color {fill:#333}
+.sticky_assist .company_review .point_desc {color:#222;font-size:16px;margin-bottom:24px;line-height:20px;}
+.sticky_assist .company_review .sriInpSel {margin-top:16px}
+
+/* WMG-28917 */
+.sticky_assist .box_tit.ico_pen:before {display:inline-block;margin:3px 1px 9px 0;width:16px;height:17px;vertical-align:top;background:url(//www.saraminimage.co.kr/sri/common/ico/ico_pen.png) no-repeat;content:""}
+.sticky_assist .box_resume_typo {overflow:hidden;height:106px;border:1px solid #555;border-radius:3px;box-sizing:border-box}
+.sticky_assist .box_resume_typo .tit {display:block;overflow:hidden;margin-bottom:10px;padding:10px 22px;height:40px;border-bottom:1px solid #555;box-sizing:border-box;color:#000;font-size:14px;line-height:18px;text-align:center;text-overflow:ellipsis;white-space:nowrap;background:#ededef}
+.sticky_assist .box_resume_typo .txt {display:-webkit-box;overflow:hidden;padding:0 22px;height:44px;color:#444;font-size:15px;line-height:22px;letter-spacing:-1px;text-overflow:ellipsis;word-wrap:break-word;word-break:break-all;-webkit-line-clamp:2;-webkit-box-orient:vertical}
