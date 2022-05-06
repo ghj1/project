@@ -9,6 +9,7 @@ import pymysql
 import time 
 import datetime
 
+
 conn = pymysql.connect(host='192.168.16.16',
                        port=3306,
                        user='raaple',
