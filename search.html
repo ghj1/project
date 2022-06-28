@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>CodePen - Google Search Bar</title>
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-1580f96ce81ff0a427cf57dda2748ce646c38efc201ae5942a29958cffa6856d.css" />
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+
+
+  <title>CodePen - Google Search Bar</title>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: var(--cp-font-family);
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; } /* $linkColorOnBlack */
+  </style>
+</head>
+
+<body class="">
+  
+
+  <div id="result-iframe-wrap" role="main">
+
+    <iframe
+      id="result"
+      srcdoc="
+<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+
+  <meta charset=&quot;UTF-8&quot;>
+  
+<link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+<meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+<link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+<link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg&quot; color=&quot;#111&quot; />
+
+
+  <title>CodePen - Google Search Bar</title>
+  
+  
+  
+  
+<style>
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  color: #000;
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size:14px;
+}
+li a:hover {
+  text-decoration: underline;
+}
+.grid{
+  height:23px;
+  position:relative;
+  bottom:4px;
+}
+.signbutton{
+  background-color: #ff4500;
+  color: #fff;
+  border:none;
+  border-radius:3px;
+  padding:7px 10px;
+  position:relative;
+  bottom:7px;
+  font-weight:bold;
+}
+.logo{
+  margin-top:200px;
+  margin-bottom:20px;
+}
+.bar{
+  margin:0 auto;
+  width:575px;
+  border-radius:30px;
+  border:1px solid #dcdcdc;
+}
+.bar:hover{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.bar:focus-within{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline:none;
+}
+.searchbar{
+  height:45px;
+  border:none;
+  width:500px;
+  font-size:16px;
+  outline: none;
+  
+}
+.voice{
+  height:20px;
+  position:relative;
+  top:5px;
+  left:10px;
+}
+.buttons{
+  margin-top:30px;
+}
+.button{
+  background-color: #f5f5f5;
+  border:none;
+  color:#707070;
+  font-size:15px;
+  padding: 10px 20px;
+  margin:5px;
+  border-radius:4px;
+  outline:none;
+}
+.button:hover{
+  border: 1px solid #c8c8c8;
+  padding: 9px 19px;
+  color:#808080;
+}
+.button:focus{
+  border:1px solid #4885ed;
+  padding: 9px 19px;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+  }
+</script>
+
+
+</head>
+
+<body translate=&quot;no&quot; >
+  <!DOCTYPE html>
+<html>
+  <center>
+    <header>
+        <ul>
+         <li><a class=&quot;links&quot; href=&quot;#user&quot;><button class=&quot;signbutton&quot; type=&quot;button&quot;>Sign in</button></a></li>
+           <li><a href=&quot;#grid&quot;><img class=&quot;grid&quot; src=&quot;https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png&quot; title=&quot;Google apps&quot;></a></li>
+          <li><a href=&quot;#images&quot;>Images</a></li>
+          <li><a href=&quot;#gmail&quot;>Gmail</a></li>
+          </ul>  
+    </header>
+    <div class=&quot;logo&quot;>
+      <img alt=&quot;raaple&quot; src=&quot;Untitled-1.png&quot;>
+    </div>
+    <div class=&quot;bar&quot;>
+      <input class=&quot;searchbar&quot; type=&quot;text&quot; title=&quot;Search&quot;>
+      <a href=&quot;#&quot;> <img class=&quot;voice&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png&quot; title=&quot;Search by Voice&quot;></a>
+    </div>
+    <div class=&quot;buttons&quot;>
+      <button class=&quot;button&quot; type=&quot;button&quot;>Raaple Search</button>
+      <button class=&quot;button&quot; type=&quot;button&quot;>I'm Feeling Lucky</button>
+     </div>
+  </body>
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 
+"
+      sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation  allow-scripts allow-top-navigation-by-user-activation" allow="accelerometer; camera; encrypted-media; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write" allowTransparency="true"
+      allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+
+  </div>
+</body>
+</html>
